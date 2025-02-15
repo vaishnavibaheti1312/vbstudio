@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Rubenz – Creative Minimal AJAX Portfolio Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons"/>
+    <link rel="stylesheet" href="css/vendor.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- ICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/content/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/content/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/content/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/content/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/content/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png"/>
+    <link rel="manifest" href="img/content/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" type="image/x-icon" href="img/content/favicon.ico"/>
+  </head>
+  <body data-barba="wrapper">
+    <!-- Loading Spinner-->
+    <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+    <!-- - Loading Spinner-->
+    <!-- Cursor follower-->
+    <div class="cursor" id="js-cursor">
+      <div class="cursor__follower">
+        <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <circle id="inner" cx="50" cy="50" r="40"></circle>
+          <circle id="outter" cx="50" cy="50" r="40"></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- - Cursor follower-->
+    <!-- Project hover backgrounds-->
+    <div class="project-backgrounds">
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-1.jpg" data-background-for="1"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-2.jpg" data-background-for="2"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-3.jpg" data-background-for="3"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-4.jpg" data-background-for="4"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-5.jpg" data-background-for="5"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-6.jpg" data-background-for="6"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-7.jpg" data-background-for="7"></div>
+      <div class="project-backgrounds__overlay overlay overlay_dark"></div>
+    </div>
+    <!-- - Project hover backgrounds-->
+    <!-- PAGE PRELOADER -->
+    <div class="preloader">
+      <div class="preloader__curtain bg-dark-2"></div>
+    </div>
+    <!-- - PAGE PRELOADER -->
+    <!-- PAGE HEADER -->
+    <header class="header header_fixed container-fluid">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto header__col-left"><a class="logo" href="homepage-slider-1.html">
+            <div class="logo__text">Rubenz</div></a>
+        </div>
+        <div class="col-auto header__col-right">
+          <div class="header__burger" id="js-burger">
+            <div class="header__burger-line"></div>
+            <div class="header__burger-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__wrapper-overlay-menu">
+        <div class="header__overlay-menu-back material-icons" id="js-submenu-back">arrow_back</div>
+        <div class="header__wrapper-menu">
+          <ul class="menu-overlay js-menu-overlay">
+            <li class="menu-item-has-children"><a href="#">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Homepages</span></div></a>
+              <ul class="sub-menu">
+                <li><a href="homepage-slider-1.html" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Fullscreen Slider 001</span></div></a>
+                </li>
+                <li><a href="homepage-slider-2.html" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Fullscreen Slider 002</span></div></a>
+                </li>
+                <li><a href="homepage-slider-3.html" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Fullscreen Slider 003</span></div></a>
+                </li>
+                <li><a href="homepage-slider-4.html" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Fullscreen Slider 004</span></div></a>
+                </li>
+                <li><a href="homepage-portfolio-grid-1.html" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Portfolio Grid</span></div></a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="#">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Portfolio</span></div></a>
+              <ul class="sub-menu">
+                <li><a href="project-1.html" data-post-id="1" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Arrigo HTML Template</span></div></a>
+                </li>
+                <li><a href="project-2.html" data-post-id="2" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Interior Design App</span></div></a>
+                </li>
+                <li><a href="project-3.html" data-post-id="3" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">The Crows Show</span></div></a>
+                </li>
+                <li><a href="project-4.html" data-post-id="4" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Enchanted Pond Side</span></div></a>
+                </li>
+                <li><a href="project-5.html" data-post-id="5" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Smart Home Sound</span></div></a>
+                </li>
+                <li><a href="project-6.html" data-post-id="6" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">Cassio Luxury Apartment</span></div></a>
+                </li>
+                <li><a href="project-7.html" data-post-id="7" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper"><span class="split-chars">The Underground</span></div></a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="services.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Services</span></div></a>
+            </li>
+            <li><a href="about.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">About</span></div></a>
+            </li>
+            <li><a href="contacts.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Contacts</span></div></a>
+            </li>
+          </ul>
+        </div>
+        <!-- - menu -->
+        <div class="header__wrapper-overlay-widgets color-white bg-dark">
+          <div class="header__wrapper-property">
+            <div class="figure-property">
+              <div class="figure-property__wrapper-heading">
+                <h6 class="split-text">Phones</h6>
+              </div>
+              <div class="figure-property__content">
+                <ul class="figure-property__list">
+                  <li class="figure-property__item">
+                    <div class="split-text">+1 504-558-6739<br>+1 918-806-0749</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__wrapper-property">
+            <div class="figure-property">
+              <div class="figure-property__wrapper-heading">
+                <h6 class="split-text">E-mail</h6>
+              </div>
+              <div class="figure-property__content">
+                <ul class="figure-property__list">
+                  <li class="figure-property__item">
+                    <div class="split-text"><a href="mailto:support@artemsemkin.com">support@artemsemkin.com</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__wrapper-property">
+            <div class="figure-property">
+              <div class="figure-property__wrapper-heading">
+                <h6 class="split-text">Address</h6>
+              </div>
+              <div class="figure-property__content">
+                <ul class="figure-property__list">
+                  <li class="figure-property__item">
+                    <div class="split-text">4575 Redbud Drive <br>Brooklyn <br>NY 11206 USA</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- - information -->
+      </div>
+    </header>
+    <!-- - PAGE HEADER -->
+    <!-- PAGE MAIN-->
+    <main class="page-wrapper" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
+      <!-- section 404 -->
+      <section class="section section-404 section-fullheight">
+        <div class="section-fullheight__inner">
+          <div class="container">
+            <div class="section-404__big">404</div>
+            <header class="row section__header section-404__header">
+              <div class="col-lg-8">
+                <h1>Page Not Found</h1>
+                <div class="section__headline"></div>
+                <p>It looks like nothing found at this location.<br>Try to navigate the menu or go to the home page.</p>
+              </div>
+            </header>
+            <div class="row section-404__wrapper-button">
+              <div class="col-12"><a class="button button button_solid button_dark" href="index.html">Back to Homepage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- - section 404 -->
+    </main>
+    <canvas id="js-webgl"></canvas>
+    <!-- - PAGE MAIN-->
+    <!-- GOOGLE MAPS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMDrMzaeoz8AqpXNuaIpCR8OWjZFY6z0A"></script>
+    <!-- - GOOGLE MAPS -->
+    <!-- VENDOR SCRIPTS -->
+    <script src="js/vendor.js"></script>
+    <!-- - VENDOR SCRIPTS -->
+    <!-- COMPONENTS -->
+    <script src="js/components.js"></script>
+    <!-- - COMPONENTS -->
+  </body>
+</html>

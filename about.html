@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Rubenz – Creative Minimal AJAX Portfolio Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons"/>
+    <link rel="stylesheet" href="css/vendor.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- ICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/content/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/content/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/content/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/content/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/content/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png"/>
+    <link rel="manifest" href="img/content/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" type="image/x-icon" href="img/content/favicon.ico"/>
+  </head>
+  <body data-barba="wrapper">
+    <!-- Loading Spinner-->
+    <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+    <!-- - Loading Spinner-->
+    <!-- Cursor follower-->
+    <div class="cursor" id="js-cursor">
+      <div class="cursor__follower">
+        <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <circle id="inner" cx="50" cy="50" r="40"></circle>
+          <circle id="outter" cx="50" cy="50" r="40"></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- - Cursor follower-->
+    <!-- Project hover backgrounds-->
+    <div class="project-backgrounds">
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-1.jpg" data-background-for="1"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-2.jpg" data-background-for="2"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-3.jpg" data-background-for="3"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-4.jpg" data-background-for="4"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-5.jpg" data-background-for="5"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-6.jpg" data-background-for="6"></div>
+      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-7.jpg" data-background-for="7"></div>
+      <div class="project-backgrounds__overlay overlay overlay_dark"></div>
+    </div>
+    <!-- - Project hover backgrounds-->
+    <!-- PAGE PRELOADER -->
+    <div class="preloader">
+      <div class="preloader__curtain bg-dark-2"></div>
+    </div>
+    <!-- - PAGE PRELOADER -->
+    <!-- PAGE HEADER -->
+    <header class="header header_fixed container-fluid bg-dark-3">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto header__col-left"><a class="logo" href="homepage-slider-1.html">
+          <div class="lazy"><img data-src="img/assets/media/logo.png" src="#" alt=""/></div></a>
+        </div>
+        <div class="col-auto header__col-right">
+          <div class="header__burger" id="js-burger">
+            <div class="header__burger-line"></div>
+            <div class="header__burger-line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__wrapper-overlay-menu">
+        <div class="header__overlay-menu-back material-icons" id="js-submenu-back">arrow_back</div>
+        <div class="header__wrapper-menu">
+          <ul class="menu-overlay js-menu-overlay">
+            <li><a href="home.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Home</span></div></a>
+            </li>
+            <li><a href="about.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">About Us</span></div></a>
+            </li>
+            <li><a href="portfolio.html" data-pjax-link="overlayMenu">
+              <div class="menu-overlay__item-wrapper"><span class="split-chars">Portfolio</span></div></a>
+          </li>
+            <li><a href="contacts.html" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper"><span class="split-chars">Contact</span></div></a>
+            </li>
+          </ul>
+        </div>
+        <!-- - menu -->
+        <div class="header__wrapper-overlay-widgets color-white bg-dark-3">
+          <div class="header__wrapper-property">
+            <div class="figure-property">
+              <div class="figure-property__wrapper-heading">
+                <h6 class="split-text">E-mail</h6>
+              </div>
+              <div class="figure-property__content">
+                <ul class="figure-property__list">
+                  <li class="figure-property__item">
+                    <div class="split-text"><a href="mailto:support@artemsemkin.com">vbstudiodesigns@gmail.com</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__wrapper-property">
+            <div class="figure-property">
+              <div class="figure-property__wrapper-heading">
+                <h6 class="split-text">Servicable Locations</h6>
+              </div>
+              <div class="figure-property__content">
+                <ul class="figure-property__list">
+                  <li class="figure-property__item">
+                    <div class="split-text">Pune <br>Mumbai </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- - information -->
+      </div>
+    </header>
+    <!-- - PAGE HEADER -->
+    <!-- PAGE MAIN-->
+    <main class="page-wrapper" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
+      <!-- section MASTHEAD -->
+      <section class="color-red section-masthead section_pt section_pb bg-dark-3" data-os-animation="data-os-animation">
+        <div class="container-fluid">
+          <header class="row section-masthead__header">
+            <div class="col">
+              <h2 class="split-chars">About Us</h2>
+              <div class="section__headline bg-red"></div>
+              <div class="heading-light color-white desc-text"><span class = "color-red"><b>VB Studio</b></span> is a dynamic and innovative design firm, specializing in residential and commercial projects. Founded in 2021, we are a team of young and creative designers dedicated to providing comprehensive design and build solutions. 
+              <br>We offer end-to-end design and build services, ensuring seamless project execution from concept to completion. Our integrated approach allows us to manage every aspect of a project, from architectural design to interior detailing and construction management.</div>
+            </div>
+          </header>
+        </div>
+      </section>
+      <!-- - section MASTHEAD -->
+      <!-- section IMAGE #1 -->
+      <section class="section section-image section_h-800 section_w-container-right bg-light-grey" data-art-parallax="data-art-parallax" data-art-parallax-factor="0.2">
+        <img class="lazy-bg art-parallax__bg" data-src="img/assets/media/about_us/About-us-1.png"></img>
+      </section>
+      <!-- - section IMAGE #1 -->
+      <!-- section PARTNERS -->
+      <section class="section section-content bg-light section_pt section_pb bg-dark-3" data-os-animation="data-os-animation">
+        <div class="container section-content__container">
+          <div class="row justify-content-between section-content__row">
+            <header class="col-lg-4 section__header section-content__inner_header">
+              <h3 class="split-chars">Vision Statement</h3>
+              <div class="section__headline"></div>
+            </header>
+            <div class="col-lg-8 section-content__inner section-content__inner_text">
+              <div class="heading-light color-white desc-text">At VB Studio, we believe in the power of design To enhance the human experience. Our vision is to create timeless, functional, and beautiful spaces that reflect our clients’ unique personalities. We are committed to pushing the boundaries of design, embracing new technologies, and delivering exceptional quality in every project.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- - section PARTNERS -->
+      <!-- section TEAM -->
+      <section class="section section-content bg-light-grey section_pt-small section_pb-large" data-os-animation="data-os-animation">
+        <div class="container section-content__container">
+          <div class="section-content__main-content">
+            <div class="row">
+              <div class="col  grid-founder">
+                <!-- <div class="grid grid_50 js-grid"> -->
+                  <!-- <div class="col-lg-4 col-md-6 grid__sizer js-grid__sizer"></div> -->
+                  <div class="col-lg-4 col-md-6">
+                    <div class="figure-member figure-member_has-social">
+                      <div class="figure-member__wrapper-img">
+                        <div class="lazy"><img data-src="img/assets/media/about_us/About-us-2.png" src="#" alt="" width="300" height="450"/></div>
+                        <div class="figure-member__social">
+                          <ul class="social">
+                            <li class="social__item"><a class="fa fa-facebook-f" href="#"></a></li>
+                            <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                            <li class="social__item"><a class="fa fa-instagram" href="#"></a></li>
+                            <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                          </ul>
+                        </div>
+                        <div class="figure-member__overlay"></div>
+                      </div>
+                      <div class="figure-member__content">
+                        <div class="figure-member__position">Founder</div>
+                        <h6>Ar. Vaishnavi Baheti</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+                <br/>
+                <div class="section-content__inner section-content__inner_text">
+                  <br>
+                  <div class="heading-light desc-text">As the Principal Architect and Founder of VB Studio, Vaishnavi Baheti is a passionate and driven entrepreneur dedicated to creating spaces that transform lives. With a Bachelor of Architecture degree from Dr. Bhanuben Nanavati College of Architecture, Vaishnavi has spent the past three years building a firm that prioritizes innovation, sustainability, and client satisfaction. Her design philosophy is rooted in the belief that every space should tell a unique story, blending beauty with functionality to elevate the human experience.</div>
+                  <div class="heading-light desc-text">Through VB Studio, Vaishnavi has cultivated a team of young, talented designers, each passionate about pushing the boundaries of design while maintaining a deep respect for the environment and community. Under her leadership, the studio has grown into a trusted name in the interior design industry, known for delivering exceptional quality and creating spaces that are both timeless and deeply personal. Vaishnavi’s entrepreneurial spirit, coupled with her commitment to excellence, continues to shape the future of design at VB Studio.</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section DESIGN_PHILOSOPHY -->
+      <section class="section section-content bg-light section_pt section_pb bg-dark-3" data-os-animation="data-os-animation">
+        <div class="container section-content__container">
+          <div class="row justify-content-between section-content__row">
+            <header class="col-lg-4 section__header section-content__inner_header color-red">
+              <h3 class="split-chars color-red">Design Philosophy</h3>
+              <div class="section__headline"></div>
+            </header>
+            <div class="col-lg-8 section-content__inner section-content__inner_text">
+              <div class="heading-light color-white desc-text">VB Studio's design philosophy is rooted in the belief that spaces should be transformative, functional, and deeply personal. Every project is approached with a focus on innovation, sustainability, and a deep understanding of the client’s unique vision. Our aim is to create environments that not only look stunning but also enhance the way you live. We thoughtfully layer textures, light, and materials to craft spaces that are both timeless and welcoming, making every detail a reflection of quality and care</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section DESIGN PROCESS -->
+      <section class="section section-image section_pt">
+        <div class="container">
+          <header class="row section__header">
+            <div class="col color-brown">
+              <h2>Our Design Process</h2>
+              <div class="section__headline"></div>
+            </div>
+          </header>
+          <div class="post__media"><img src="img/assets/media/about_us/About-us-process.png" alt=""/></div>
+        </div>
+
+        <!-- <div data-art-parallax="true" data-art-parallax-factor="-0.1">
+          <div class="lazy"><img data-src="img/assets/media/about_us/About-us-process.png" src="#" alt=""/></div>
+        </div> -->
+      </section>
+      <!-- - section DESIGN PROCESS -->
+      <!-- section PUBLICATIONS AWARDS -->
+      <section class="section section-content bg-light section_pt section_pb bg-dark-3" data-os-animation="data-os-animation">
+        <div class="container section-content__container">
+          <div class="row justify-content-between section-content__row">
+            <header class="col-lg-4 section__header section-content__inner_header color-red">
+              <h3 class="split-chars color-red">Publications & Awards</h3>
+              <div class="section__headline"></div>
+            </header>
+            <div class="col-lg-8 section-content__inner section-content__inner_text">
+              <div class="heading-light color-white desc-text">
+                <ul>
+                  <li>
+                    Homepublication
+                  </li>
+                  <li>
+                    Architects and Interiors India 
+                  </li>
+                  <li>
+                    30 Under 30 Rising & Creative Interior Designer of the Year, India 
+                  </li>
+                  <li>
+                    Promising Interior Design Firm of the Year 2024, India (Awarded by the National Architecture and Interior Design Excellence Awards 2024 (GLOBAL EDITION).
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- - section TEAM -->
+      <footer class="footer container-fluid">
+        <div class="footer__area-primary">
+          <div class="row">
+            <div class="col-lg-6 footer__col">
+              <section class="widget widget_ruben_logo"><a class="logo" href="homepage-slider-1.html">
+                  <div class="logo__text">VB Studio</div></a>
+                <p>VB Studio is a dynamic and innovative design firm, specializing in residential and commercial projects</p>
+              </section>
+              <br/>
+              <section class="widget widget_ruben_social">
+                <ul class="social">
+                  <li class="social__item"><a class="fa fa-instagram" href="#"></a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-lg-6 footer__col">
+              <section class="widget widget_ruben_contacts">
+                <p>Email</p>
+                <p><a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="footer__area-secondary">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 footer__col">
+              <section class="widget widget_ruben_copyright"><small>© 2024 VB</small>
+              </section>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <canvas id="js-webgl"></canvas>
+    <!-- - PAGE MAIN-->
+    <!-- GOOGLE MAPS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMDrMzaeoz8AqpXNuaIpCR8OWjZFY6z0A"></script>
+    <!-- - GOOGLE MAPS -->
+    <!-- VENDOR SCRIPTS -->
+    <script src="js/vendor.js"></script>
+    <!-- - VENDOR SCRIPTS -->
+    <!-- COMPONENTS -->
+    <script src="js/components.js"></script>
+    <!-- - COMPONENTS -->
+  </body>
+</html>
