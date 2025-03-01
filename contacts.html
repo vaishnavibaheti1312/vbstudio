@@ -58,43 +58,39 @@
       });
     </script> -->
     <script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize EmailJS
-  emailjs.init(
-              "klI8a0jbAFXTg1SA2"
-            );
-  
-  // Get the form and submit button
-  const form = document.getElementById('contact-form');
-  const submitButton = form.querySelector('button[type="submit"]');
-  
-  // Change the button type to prevent form submission
-  submitButton.type = 'button';
-  
-  // Add click event listener to the button
-  submitButton.addEventListener('click', function() {
-    // Show loading state
-    const originalText = this.innerHTML;
-    this.innerHTML = '<span>Sending...</span>';
-    this.disabled = true;
-    
-    // Send the form data using EmailJS
-    emailjs.sendForm('service_vbstudio', 'template_xh2lff8', form)
-      .then(function() {
-        console.log('SUCCESS!');
-        form.reset();
-        alert('Thank you! Your message has been sent.');
-        submitButton.innerHTML = originalText;
-        submitButton.disabled = false;
-      })
-      .catch(function(error) {
-        console.log('FAILED...', error);
-        alert('Sorry, there was a problem sending your message. Please try again later.');
-        submitButton.innerHTML = originalText;
-        submitButton.disabled = false;
+      document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // This is crucial - it stops the default form submission
+        
+        // Show some loading state to the user (optional)
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span>Sending...</span>';
+        submitButton.disabled = true;
+        
+        // Send form using EmailJS
+        emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
+          .then(() => {
+            console.log('SUCCESS!');
+            // Reset the form
+            this.reset();
+            // Show success message
+            alert('Thank you! Your message has been sent.');
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          })
+          .catch((error) => {
+            console.log('FAILED...', error);
+            // Show error message
+            alert('Sorry, there was a problem sending your message. Please try again later.');
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          });
       });
-  });
-});
+    });
+    </script>
     </script>
   <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
 </head>
