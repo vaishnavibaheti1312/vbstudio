@@ -58,50 +58,42 @@
       });
     </script> -->
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-          const contactForm = document.getElementById('contact-form');
+      // Initialize EmailJS when the document is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize EmailJS
+        emailjs.init("pvtkey");
+        
+        // Get the form element
+        const form = document.getElementById('contact-form');
+        
+        // Add submit event listener to the form
+        form.addEventListener('submit', function(event) {
+          // Prevent the default form submission
+          event.preventDefault();
           
-          if (contactForm) {
-            // Add return false to the onsubmit attribute directly on the form element
-            contactForm.setAttribute('onsubmit', 'return false;');
-            
-            contactForm.addEventListener('submit', function(event) {
-              // Belt and suspenders approach - prevent default in multiple ways
-              event.preventDefault();
-              event.stopPropagation();
-              
-              // Show loading state
-              const submitButton = this.querySelector('button[type="submit"]');
-              const originalText = submitButton.innerHTML;
-              submitButton.innerHTML = '<span>Sending...</span>';
-              submitButton.disabled = true;
-              
-              // Send form using EmailJS
-              emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
-                .then(() => {
-                  console.log('SUCCESS!');
-                  // Reset the form
-                  this.reset();
-                  // Show success message
-                  alert('Thank you! Your message has been sent.');
-                  // Reset button
-                  submitButton.innerHTML = originalText;
-                  submitButton.disabled = false;
-                })
-                .catch((error) => {
-                  console.log('FAILED...', error);
-                  // Show error message
-                  alert('Sorry, there was a problem sending your message. Please try again later.');
-                  // Reset button
-                  submitButton.innerHTML = originalText;
-                  submitButton.disabled = false;
-                });
-              
-              // Return false as additional prevention measure
-              return false;
+          // Change button state to indicate loading
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+          submitButton.innerHTML = '<span>Sending...</span>';
+          submitButton.disabled = true;
+          
+          // Send the form data using EmailJS
+          emailjs.sendForm('service-d', 'templateid', this)
+            .then(function() {
+              console.log('SUCCESS!');
+              form.reset();
+              alert('Thank you! Your message has been sent.');
+              submitButton.innerHTML = originalText;
+              submitButton.disabled = false;
+            })
+            .catch(function(error) {
+              console.log('FAILED...', error);
+              alert('Sorry, there was a problem sending your message. Please try again later.');
+              submitButton.innerHTML = originalText;
+              submitButton.disabled = false;
             });
-          }
         });
+      });
     </script>
   <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
 </head>
@@ -238,7 +230,7 @@
       <div class="section-map__content">
         <!-- - google map -->
         <div class="section-map__wrapper-form bg-dark-2 color-white">
-          <form id="contact-form" class="form" onsubmit="return false;">
+          <form id="contact-form" class="form">
             <div class="row form__header">
               <div class="col">
                 <h4>Contact Us</h4>
