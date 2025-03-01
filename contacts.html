@@ -40,7 +40,7 @@
             );
         })();
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       // Listen for the form submit event
       document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -56,6 +56,40 @@
               alert('There was an error sending the email. Please try again.');
           });
       });
+    </script> -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // This is crucial - it stops the default form submission
+        
+        // Show some loading state to the user (optional)
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span>Sending...</span>';
+        submitButton.disabled = true;
+        
+        // Send form using EmailJS
+        emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
+          .then(() => {
+            console.log('SUCCESS!');
+            // Reset the form
+            this.reset();
+            // Show success message
+            alert('Thank you! Your message has been sent.');
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          })
+          .catch((error) => {
+            console.log('FAILED...', error);
+            // Show error message
+            alert('Sorry, there was a problem sending your message. Please try again later.');
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          });
+      });
+    });
     </script>
   <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
 </head>
@@ -192,7 +226,7 @@
       <div class="section-map__content">
         <!-- - google map -->
         <div class="section-map__wrapper-form bg-dark-2 color-white">
-          <form id="contact-form" class="form" method="POST">
+          <form id="contact-form" class="form">
             <div class="row form__header">
               <div class="col">
                 <h4>Contact Us</h4>
