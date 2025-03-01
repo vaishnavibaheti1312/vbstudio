@@ -41,19 +41,21 @@
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-                    return false;
-            });
-        }
+      // Listen for the form submit event
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Send the form using EmailJS's sendForm method
+        emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
+          .then(function(response) {
+              // On success, alert the user and reset the form
+              alert('Email has been sent');
+              document.getElementById('contact-form').reset();
+          }, function(error) {
+              console.error('FAILED...', error);
+              alert('There was an error sending the email. Please try again.');
+          });
+      });
     </script>
   <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
 </head>
