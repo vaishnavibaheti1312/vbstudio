@@ -378,6 +378,10 @@ img {
   color: #734135;
 }
 
+.color-brown .section__headline {
+  background-color: #BA6B57;
+}
+
 .color-red .section__headline {
   background-color: #734135;
 }
@@ -1035,7 +1039,7 @@ div[class*=bg-image-] {
 .footer {
   position: relative;
   background-color: #303030;
-  color: #888888;
+  color: #ffffff;
   font-size: 16px;
 }
 .footer a {
@@ -2099,8 +2103,8 @@ a.logo {
 .art-parallax > img, [data-art-parallax] > img {
   width: auto;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* -o-object-fit: cover;
+     object-fit: cover; */
 }
 
 .art-parallax__bg {
@@ -2336,9 +2340,11 @@ a.logo {
 
 .section__header h2 {
   margin-bottom: 0.75em;
+  font-family: 'Playfair Display';
 }
 .section__header h3:last-of-type {
   margin-bottom: 0;
+  font-family: 'Playfair Display';
 }
 
 .section__headline {
