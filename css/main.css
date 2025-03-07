@@ -2098,11 +2098,11 @@ a.logo {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .art-parallax > img, [data-art-parallax] > img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   /* -o-object-fit: cover;
      object-fit: cover; */
 }
@@ -2112,9 +2112,9 @@ a.logo {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  /* background-size: cover; */
-  background-size: contain;
+  height: auto;
+  background-size: cover;
+  /* background-size: contain; */
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -2355,6 +2355,12 @@ a.logo {
   margin-bottom: 20px;
   margin-top: 10px;
 }
+
+.section_h-full {
+  height: auto;
+  min-height: 100vh;
+}
+
 
 .section_h-100 {
   height: 100px;
@@ -2986,7 +2992,11 @@ a.logo {
 /*!========================================================================
  * 41. Section Map
  * ======================================================================!*/
-.section-map__wrapper-form {
+ .contact-warning{
+  margin: 50px 0 0 0;
+ }
+
+ .section-map__wrapper-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2994,8 +3004,8 @@ a.logo {
   top: auto;
   right: auto;
   bottom: auto;
-  padding: 50px 80px;
-  margin: 80px 150px;
+  padding: 100px 80px;
+  margin: 80px 250px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -3076,8 +3086,9 @@ a.logo {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  height: 150vh;
+  min-height: 100%;
   margin-top: 0;
 }
 
