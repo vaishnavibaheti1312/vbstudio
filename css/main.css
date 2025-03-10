@@ -1054,9 +1054,11 @@ div[class*=bg-image-] {
   text-align: left;
 }
 .footer__area-primary .footer__col:nth-child(2) {
+  text-align: left;
+}
+.footer__area-primary .footer__col:nth-child(3) {
   text-align: right;
 }
-
 .footer__area-secondary {
   padding-top: 50px;
   padding-bottom: 50px;
