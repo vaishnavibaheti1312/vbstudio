@@ -32,66 +32,6 @@
   <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init(
-              "klI8a0jbAFXTg1SA2"
-            );
-        })();
-    </script>
-    <!-- <script type="text/javascript">
-      // Listen for the form submit event
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        
-        // Send the form using EmailJS's sendForm method
-        emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
-          .then(function(response) {
-              // On success, alert the user and reset the form
-              alert('Email has been sent');
-              document.getElementById('contact-form').reset();
-          }, function(error) {
-              console.error('FAILED...', error);
-              alert('There was an error sending the email. Please try again.');
-          });
-      });
-    </script> -->
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // This is crucial - it stops the default form submission
-        
-        // Show some loading state to the user (optional)
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        submitButton.innerHTML = '<span>Sending...</span>';
-        submitButton.disabled = true;
-        
-        // Send form using EmailJS
-        emailjs.sendForm('service_vbstudio', 'template_xh2lff8', this)
-          .then(() => {
-            console.log('SUCCESS!');
-            // Reset the form
-            this.reset();
-            // Show success message
-            alert('Thank you! Your message has been sent.');
-            // Reset button
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-          })
-          .catch((error) => {
-            console.log('FAILED...', error);
-            // Show error message
-            alert('Sorry, there was a problem sending your message. Please try again later.');
-            // Reset button
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-          });
-      });
-    });
-    </script>
-    </script>
   <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
 </head>
 
@@ -226,59 +166,12 @@
      <div class="contact-warning text-center"><p>For all project enquiries, email vbstudiodesigns@gmail.com with the subject NEW PROJECT. </p></div>
     <section class="section section-map">
       <div class="section-map__content">
-        <!-- <form id="contact-form" class="form">
-          <div class="row form__header">
-            <div class="col">
-              <h4>Contact Us</h4>
-            </div>
-          </div>
-          <div class="row form__row">
-            <div class="col form__col">
-              <label class="input-float js-input-float">
-                <input class="input-float__input" type="text" name="visitor_name" data-msg="Please enter your name"
-                  required="required" /><span class="input-float__label">Your name</span><span
-                  class="form__error"></span>
-              </label>
-            </div>
-          </div>
-          <div class="row form__row">
-            <div class="col form__col">
-              <label class="input-float js-input-float">
-                <input class="input-float__input" type="tel" name="visitor_phone" pattern="\d{10}"
-                  data-msg="Please enter a correct phone number" required="required" /><span
-                  class="input-float__label">Your Mobile Number</span><span class="form__error"></span>
-              </label>
-            </div>
-          </div>
-          <div class="row form__row">
-            <div class="col form__col">
-              <label class="input-float js-input-float">
-                <input class="input-float__input" type="email" name="visitor_email"
-                  data-msg="Please enter a correct e-mail" required="required" /><span class="input-float__label">Your
-                  E-mail</span><span class="form__error"></span>
-              </label>
-            </div>
-          </div>
-          <div class="row form__row">
-            <div class="col form__col">
-              <label class="input-float js-input-float">
-                <textarea class="input-float__input input-float__input_textarea" name="visitor_msg"></textarea><span
-                  class="input-float__label">Your Message</span><span class="form__error"></span>
-              </label>
-            </div>
-          </div>
-          <div class="row form__row">
-            <div class="col form__col form__col_submit text-center">
-              <button class="button button_solid button_black button_fullwidth bg-dark-3"
-                type="submit"><span>SUBMIT</span></button>
-            </div>
-          </div>
-        </form> -->
         <div class="section-map__wrapper-form bg-dark-2 color-white text-center">
           <div class="header__wrapper-property">
             <div class="figure-property">
               <div class="figure-property__wrapper-heading">
                 <h6 class="">Address</h6>
+                <br/>
               </div>
               <div class="figure-property__wrapper-heading">
                 <h6 class="">PUNE</h6>
@@ -290,6 +183,7 @@
                   </li>
                 </ul>
               </div>
+              <br/>
               <div class="figure-property__wrapper-heading">
                 <h6 class="">MUMBAI</h6>
               </div>
@@ -301,27 +195,48 @@
                 </ul>
               </div>
               <br/>
-              <div class="figure-property__wrapper-heading">
-                <h6 class="">Phone</h6>
-              </div>
-              <div class="figure-property__content">
-                <ul class="figure-property__list">
-                  <li class="figure-property__item">
-                    <div class="">+91 8010356912</div>
-                  </li>
+<!-- PHONE Heading -->
+<div class="figure-property__wrapper-heading">
+  <h6>PHONE</h6>
+</div>
+<!-- PHONE Number -->
+<div class="figure-property__content">
+  <ul class="figure-property__list">
+    <li class="figure-property__item">
+      <div>+91 8010356912</div>
+    </li>
+  </ul>
+</div>
+<!-- The horizontal line after phone number -->
+<div class="line-separator"></div>
+
+<!-- E-MAIL Heading -->
+<div class="figure-property__wrapper-heading">
+  <h6>E-MAIL</h6>
+</div>
+<!-- E-MAIL Address -->
+<div class="figure-property__content">
+  <ul class="figure-property__list">
+    <li class="figure-property__item">
+      <div>
+        <a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- The horizontal line after email -->
+<div class="line-separator"></div>
+
+<!-- If you have icons or anything else after this, they come here -->
+
+
+              <section class="widget widget_ruben_social">
+                <ul class="social">
+                  <li class="social__item"><a class="fa fa-envelope-o" href="mailto:vbstudiodesigns@gmail.com"></a></li>
+                  <li class="social__item"><a class="fa fa-instagram" href="https://www.instagram.com/vbstudiodesigns"></a></li>
+                  <li class="social__item"><a class="fa fa-whatsapp" href="https://wa.me/+918010356912?text=Hi%20Vaishnavi%2C%20I%20wanted%20to%20get%20in%20touch%20regarding%20--"></a></li>
                 </ul>
-              </div>
-              <br/>
-              <div class="figure-property__wrapper-heading">
-                <h6 class="">E-mail</h6>
-              </div>
-              <div class="figure-property__content">
-                <ul class="figure-property__list">
-                  <li class="figure-property__item">
-                    <div class=""><a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a></div>
-                  </li>
-                </ul>
-              </div>
+              </section>
             </div>
           </div>
         
@@ -349,19 +264,9 @@
             </section>
           </div>
           <div class="col-lg-4 footer__col">
-            <section class="widget widget_ruben_logo">
-              <h6>Address</h6>
-              <h6>Pune</h6>
-              <p>7th floor, Icon tower, Baner road, Baner, Pune - 411045</p>
-              <h6>Mumbai</h6>
-              <p>Peninsula Towers, Peninsula Corporate Park, Lower Parel, Mumbai - 400013</p>
-            </section>
-          </div>
-          <div class="col-lg-4 footer__col">
             <section class="widget widget_ruben_contacts">
               <p style="font-weight: bold;">Email</p>
               <p><a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a></p>
-              <br/>
               <p style="font-weight: bold;">Phone</p>
               <p>+91 8010356912</p>
             </section>
