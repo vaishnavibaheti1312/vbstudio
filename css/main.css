@@ -78,7 +78,7 @@
  * ==========================================================================
  * ==========================================================================
  */
-
+ 
 html {
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
@@ -121,9 +121,18 @@ img {
 }
 
 .container-fluid {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
+
+@media screen and (min-width: 1200px) {
+  .container-fluid {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+
 
 .container {
   padding-left: 25px;
@@ -155,12 +164,13 @@ img {
     padding-right: 80px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container-fluid {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
+
 @media screen and (max-width: 991px) {
   .container-fluid, .container {
     padding-left: 30px;
@@ -2998,16 +3008,14 @@ a.logo {
   margin: 50px 0 0 0;
  }
 
- .section-map__wrapper-form {
+.section-map__wrapper-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  padding: 100px 80px;
-  margin: 80px 250px;
+  /* Remove large fixed margin/padding */
+  padding: 50px 20px; 
+  margin: 40px auto; /* “auto” will center horizontally if needed */
+  max-width: 1200px; /* optional to limit width on large screens */
 }
 
 @media screen and (max-width: 1400px) {
@@ -3023,11 +3031,8 @@ a.logo {
 }
 @media screen and (max-width: 991px) {
   .section-map__wrapper-form {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    padding: 80px 30px;
+    padding: 30px 15px;
+    margin: 20px auto;
   }
 }
 /*!========================================================================
