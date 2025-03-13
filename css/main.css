@@ -3018,33 +3018,71 @@ a.logo {
   margin: 50px 0 0 0;
  }
 
-.section-map__wrapper-form {
+ .section-map__wrapper-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Remove large fixed margin/padding */
-  padding: 50px 20px; 
-  margin: 40px auto; /* “auto” will center horizontally if needed */
-  max-width: 1200px; /* optional to limit width on large screens */
+  padding: 50px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 @media screen and (max-width: 1400px) {
   .section-map__wrapper-form {
-    right: 80px;
     padding: 80px 60px;
   }
 }
 @media screen and (max-width: 1200px) {
   .section-map__wrapper-form {
-    right: 50px;
+    /* left: auto; right: auto; (or just omit them) */
   }
 }
 @media screen and (max-width: 991px) {
   .section-map__wrapper-form {
-    padding: 30px 15px;
-    margin: 20px auto;
+    flex-direction: column;       /* Stack vertically */
+    padding: 30px 15px;          
+    margin: 20px auto;           /* Keep it centered */
   }
 }
+@media screen and (max-width: 991px) {
+  .contact-warning {
+    margin: 20px 0;
+    font-size: 14px; /* if you want slightly smaller text */
+  }
+  .header__wrapper-property {
+    margin-bottom: 30px;
+  }
+  .figure-property__item {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer__area-primary .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__col {
+    margin-bottom: 30px; /* separate columns on mobile */
+    text-align: center;
+  }
+}
+.line-separator {
+  width: 100%;              /* full width of the container */
+  height: 1px;              /* thickness of the line */
+  background-color: #666;   /* adjust to match your design color */
+  margin: 20px 0;           /* spacing above/below the line */
+}
+
+@media screen and (max-width: 991px) {
+  .figure-property,
+  .figure-property__wrapper-heading,
+  .figure-property__content {
+    text-align: center; 
+  }
+}
+
 /*!========================================================================
  * 42. Section Masthead
  * ======================================================================!*/
