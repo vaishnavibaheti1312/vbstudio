@@ -935,14 +935,25 @@ div[class*=bg-image-] {
   letter-spacing: 1px;
   text-transform: uppercase;
   position: absolute;
-  top: -7px;
-  right: calc(100% + 25px);
+  top: 0;
+  left: -40px;
   color: #888888;
   transform: rotate(-90deg);
-  transform-origin: right center;
-  text-align: right;
+  transform-origin: left top;
   white-space: nowrap;
 }
+@media screen and (max-width: 991px) {
+  .figure-member__position {
+    /* Either remove the entire block, or re-apply absolute/rotate here. */
+    position: absolute !important;
+    top: 0 !important;
+    left: -40px !important;
+    transform: rotate(-90deg) !important;
+    transform-origin: left top !important;
+    margin-bottom: 0 !important;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .figure-member__position {
     font-size: 11px;
@@ -5161,4 +5172,18 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  .col-grid {
+    grid-template-columns: 1fr;  /* Stacks each item full width */
+    padding: 20px;               /* Optional: reduce padding so items aren’t too squished */
+  }
+
+  /* Optional: reduce padding/margins for grid items on mobile */
+  .grid__item_50 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;         /* or whatever margin you prefer */
+  }
 }
