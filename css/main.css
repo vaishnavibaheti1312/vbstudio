@@ -5296,7 +5296,8 @@ a:focus {
 @media (max-width: 991px) {  
 
   .section-nav-portfolio__inner_prev {
-    min-height: 250px;
+    margin-top: 60px;
+    min-height: 180px;
   }
 }
 
