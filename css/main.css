@@ -935,7 +935,7 @@ div[class*=bg-image-] {
   letter-spacing: 1px;
   text-transform: uppercase;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: -40px;
   color: #888888;
   transform: rotate(-90deg);
@@ -946,7 +946,7 @@ div[class*=bg-image-] {
   .figure-member__position {
     /* Either remove the entire block, or re-apply absolute/rotate here. */
     position: absolute !important;
-    top: 0 !important;
+    top: 50px !important;
     left: -40px !important;
     transform: rotate(-90deg) !important;
     transform-origin: left top !important;
@@ -5245,6 +5245,13 @@ a:focus {
 .img-15 { grid-column: 3; grid-row: 8; }
 .img-16 { grid-column: 1 / span 3; grid-row: 9; } 
 
+.home-1 { grid-column: 1; grid-row: 1; }
+.home-2 { grid-column: 2; grid-row: 1; }
+.home-3 { grid-column: 3; grid-row: 1; }
+.home-4 { grid-column: 1; grid-row: 2; }
+.home-5 { grid-column: 2; grid-row: 2; }
+.home-6 { grid-column: 3; grid-row: 2; }
+
 
 /* 📱 Mobile Layout */
 @media (max-width: 991px) {
@@ -5268,6 +5275,13 @@ a:focus {
   .img-14 { grid-column: 2; grid-row: 9; }
   .img-15 { grid-column: 1 / span 2; grid-row: 10; } 
   .img-16 { grid-column: 1 / span 2; grid-row: 11;}
+
+  .home-1 { grid-column: 1; grid-row: 1; }
+  .home-2 { grid-column: 2; grid-row: 3; }
+  .home-3 { grid-column: 1; grid-row: 3; }
+  .home-4 { grid-column: 1; grid-row: 2; }
+  .home-5 { grid-column: 2; grid-row: 2; }
+  .home-6 { grid-column: 2; grid-row: 1; }
 
   .section-figures {
     padding: 30px 20px;

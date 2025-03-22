@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>VB Studio</title>
+    <link rel="icon" href="img/assets/media/VB-Transparent-bg.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
@@ -22,15 +23,10 @@
     <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png"/>
     <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png"/>
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
-    <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-icon-192x192.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png"/>
     <link rel="manifest" href="img/content/manifest.json"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    <link rel="icon" type="image/x-icon" href="img/content/favicon.ico"/>
   </head>
   <body data-barba="wrapper">
     <!-- Loading Spinner-->
@@ -154,7 +150,10 @@
         </div>
       </section> -->
       <section class="section image-container">
-        <img class="lazy-bg" data-src="img/assets/media/home_page/banner.png"></img>
+        <picture>
+          <source media="(max-width: 991px)" srcset="img/assets/media/home-banner-mobile.png">
+          <img class="lazy-bg" data-src="img/assets/media/home-banner-desktop.png"></img>
+        </picture>
       </section>
       <!-- - section MASTHEAD -->
       <!-- section CONTENT #1 -->
@@ -163,43 +162,28 @@
           <div class="row justify-content-between section-content__row">
             <div class="section-content__inner section-content__inner_text">
               <h5 class="heading-light color-white desc-text text-center">VB Studio's design philosophy is rooted in the belief that spaces should be transformative, functional, and deeply personal. Every project is approached with a focus on innovation, sustainability, and a deep understanding of the client’s unique vision</h5>
+              <br/>
             </div>
           </div>
         </div>
       </section>
       <!-- section CONTENT #1 -->
       <!-- section CONTENT #2 -->
-      <section class="section section-content section_pt-small section_pb bg-dark-3" data-os-animation="data-os-animation">
-        <div class="section-content__main-content">
-          <div class="row">
-            <div class="col-grid">
-                <!-- <div class="col-lg-4 col-md-6 grid__item grid__item_50 grid__sizer js-grid__sizer"></div> -->
-                <div class="col-lg-10 col-md-6 grid__item grid__item_50 js-grid__item">
-                  <div class="figure-member figure-member_has-social">
-                    <div class="figure-member__wrapper-img">
-                      <div class="lazy"><img data-src="img/assets/media/home_page/home-portfolio-1.png" src="#" alt="" width="300" height="450"/></div>
-                    </div>
-                    <div class="figure-member__content color-white">
-                      <div class="figure-member__position">001</div>
-                      <h4>Apartment 14</h4>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- <div class="col-lg-4 col-md-6 grid__item grid__item_50 grid__sizer js-grid__sizer"></div> -->
-                <div class="col-lg-10 col-md-6 grid__item grid__item_50 js-grid__item">
-                  <div class="figure-member figure-member_has-social">
-                    <div class="figure-member__wrapper-img">
-                      <div class="lazy"><img data-src="img/assets/media/home_page/home-portfolio-2.png" src="#" alt="" width="300" height="450"/></div>
-                    </div>
-                    <div class="figure-member__content color-white">
-                      <div class="figure-member__position">002</div>
-                      <h4>The Zen Oasis</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section class="section section-figures container-fluid bg-dark-3">
+        <header class="row section__header">
+          <div class="col color-red text-center">
+            <h2>Our Work</h2>
+            <br>
+            <br>
           </div>
+        </header>
+        <div class="gallery">
+          <img src="img/assets/media/portfolio/Desktop/Banner.png" class="img home-1">
+          <img src="img/assets/media/portfolio/Desktop/row7-2.png" class="img home-2">
+          <img src="img/assets/media/portfolio/Desktop/row1-3.png" class="img home-3">
+          <img src="img/assets/media/portfolio/Desktop/row7-1.png" class="img home-4">
+          <img src="img/assets/media/portfolio/Desktop/row1-2.png" class="img home-5">
+          <img src="img/assets/media/portfolio/Desktop/row7-3.png" class="img home-6">
         </div>
       </section>
       <!-- - section CONTENT #2 -->
@@ -210,12 +194,11 @@
             <div class="col color-red text-center">
               <h2>Our Process</h2>
               <br>
-              <br>
             </div>
           </header>
           <div class="post__media">
             <picture>
-              <source media="(max-width: 991px)" srcset="img/assets/media/home_page/Home-process-mobile.png">
+              <source media="(max-width: 991px)" srcset="img/assets/media/VB-stepbystep.png">
               <img src="img/assets/media/home_page/home-process.png" alt=""/>
             </picture>
           </div>
