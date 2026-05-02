@@ -1,0 +1,168 @@
+/* ============================================================
+   VB Studio — About Page Styles (css/about.css)
+   Extends css/homepage.css; same design tokens and font stack.
+   ============================================================ */
+
+.ab-main {
+  background: #F5F0EB;
+}
+
+/* ============================================================
+   INTRO GALLERY — 6-photo strip inside the dark intro section
+   ============================================================ */
+.ab-intro__gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin: 48px auto 0;
+  max-width: 1100px;
+}
+
+.ab-intro__gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ab-intro__gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   CTA / CONTACT FORM
+   ============================================================ */
+.ab-form {
+  max-width: 800px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ab-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ab-form__label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ab-form__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+  color: #fff;
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px 0;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.ab-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.ab-form__input:focus {
+  border-bottom-color: #F5F0EB;
+}
+
+.ab-form__input--error {
+  border-bottom-color: #E8A090 !important;
+}
+
+.ab-form__textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.ab-form__error {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.70rem;
+  color: #E8A090;
+  display: none;
+  margin-top: 2px;
+}
+
+.ab-form__error--visible {
+  display: block;
+}
+
+.ab-form__char-count {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.38);
+  text-align: right;
+  margin-top: 3px;
+  transition: color 0.2s ease;
+}
+
+.ab-form__submit {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.ab-form__success {
+  display: none;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #F5F0EB;
+  padding: 36px 24px;
+  background: rgba(245, 240, 235, 0.10);
+  border: 1px solid rgba(245, 240, 235, 0.28);
+  border-radius: 2px;
+  margin: 32px auto 0;
+  max-width: 580px;
+}
+
+.ab-form__success--visible {
+  display: block;
+}
+
+/* ============================================================
+   SERVICES SECTION — override button link text for about page
+   ============================================================ */
+.ab-main .hp-services__content .hp-btn--cream {
+  margin-top: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .ab-intro__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab-intro__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .ab-form {
+    gap: 22px;
+  }
+
+  .ab-form__input {
+    font-size: 16px;
+  }
+}

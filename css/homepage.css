@@ -1,0 +1,1204 @@
+/* ============================================================
+   VB Studio — Homepage Redesign
+   Color palette: warm cream (#F5F0EB), dark brown (#392F2C),
+   accent brown (#BA6B57), charcoal (#333), cream buttons (#F5F0EB)
+   Fonts: Pinyon Script (script/cursive), Cormorant (display/serif),
+          Playfair Display (cards/overlays), Lato, Poppins
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+.hp-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #F5F0EB;
+  color: #333333;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.hp-body.hp-menu-open {
+  overflow: hidden;
+}
+
+.hp-main {
+  width: 100%;
+}
+
+/* ---------- Shared Section Title ---------- */
+.hp-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hp-section-title--script {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  color: #392F2C;
+}
+
+/* ---------- Shared Button Styles ---------- */
+.hp-btn {
+  display: inline-block;
+  padding: 14px 48px;
+  border-radius: 50px;
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hp-btn--outline {
+  border: 1px solid #333;
+  color: #333;
+  background: transparent;
+}
+.hp-btn--outline:hover {
+  background: #333;
+  color: #fff;
+}
+
+.hp-btn--cream {
+  background: #F5F0EB;
+  color: #333;
+  border: none;
+}
+.hp-btn--cream:hover {
+  background: #EDE5DC;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.hp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.hp-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hp-header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.hp-header__nav {
+  display: flex;
+  gap: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hp-header__nav-link {
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #392F2C;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
+}
+.hp-header__nav-link:hover,
+.hp-header__nav-link--active {
+  opacity: 0.7;
+}
+
+/* Burger (mobile only) */
+.hp-header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hp-header__burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #392F2C;
+  transition: all 0.3s ease;
+}
+.hp-header__burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(5px);
+}
+.hp-header__burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hp-header__burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-5px);
+}
+
+/* Mobile menu */
+.hp-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(61, 43, 31, 0.97);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+.hp-mobile-menu.active {
+  display: flex;
+}
+
+.hp-mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: center;
+}
+.hp-mobile-menu__link {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #F5F0EB;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hp-hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hp-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================================
+   INTRODUCTION
+   ============================================================ */
+.hp-intro {
+  background: #392F2C;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.hp-intro .hp-section-title--script {
+  color: #fff;
+}
+
+.hp-intro__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hp-intro__text {
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #fff;
+  text-align: center;
+}
+
+/* ============================================================
+   FOUNDER QUOTE
+   ============================================================ */
+.hp-founder {
+  background: #fff;
+  padding: 60px 20px 80px;
+}
+
+.hp-founder__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hp-founder__photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.hp-founder__text-col {
+  padding: 20px 0;
+}
+
+.hp-founder__quote-mark {
+  font-family: "Cormorant", serif;
+  font-size: 4rem;
+  color: #392F2C;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hp-founder__quote {
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #392F2C;
+  margin-bottom: 16px;
+}
+
+.hp-founder__signature {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: #392F2C;
+  margin-top: 28px;
+  margin-bottom: 2px;
+}
+
+.hp-founder__title {
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #392F2C;
+}
+
+/* ============================================================
+   SELECTED WORKS
+   ============================================================ */
+.hp-works {
+  background: #F5F0EB;
+  padding: 80px 20px;
+}
+
+.hp-works__carousel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hp-works__swiper {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.hp-works__card {
+  height: 100%;
+}
+
+.hp-works__card-img-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  aspect-ratio: 1 / 1.15;
+  text-decoration: none;
+}
+
+.hp-works__card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hp-works__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 43, 31, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hp-works__card-img-wrapper:hover .hp-works__card-overlay {
+  opacity: 1;
+}
+.hp-works__card-img-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+.hp-works__card-year {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.hp-works__card-name {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hp-works__card-desc {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hp-works__card-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.hp-works__card-btn:hover {
+  background: #fff;
+  color: #3D2B1F;
+}
+
+.hp-works__arrow {
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  color: #3D2B1F;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.hp-works__arrow:hover {
+  opacity: 0.6;
+}
+
+.hp-works__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.hp-services {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+}
+
+.hp-services__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 43, 31, 0.6);
+}
+
+.hp-services__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hp-services__heading {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.3;
+  color: #fff;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.hp-services__text {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #eee;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* ============================================================
+   DESIGN PROCESS
+   ============================================================ */
+.hp-process {
+  background: #F5F0EB;
+  padding: 80px 20px;
+}
+
+.hp-process__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hp-process__heading {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  color: #392F2C;
+  margin-bottom: 8px;
+}
+
+.hp-process__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: #BA6B57;
+  margin-bottom: 50px;
+}
+
+.hp-process__steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hp-process__step {
+  flex: 1;
+  max-width: 240px;
+  text-align: center;
+}
+
+.hp-process__step-card {
+  background: #E8DDD4;
+  border-radius: 12px;
+  padding: 28px 20px;
+  margin-bottom: 16px;
+}
+
+.hp-process__step-num {
+  display: block;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #BA6B57;
+  margin-bottom: 8px;
+}
+
+.hp-process__step-title {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #392F2C;
+  text-align: center;
+  margin: 0;
+}
+
+.hp-process__step-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #555;
+  padding: 0 8px;
+}
+
+.hp-process__arrow {
+  font-size: 1.8rem;
+  color: #BA6B57;
+  margin-top: 36px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   INSTAGRAM / BTS
+   ============================================================ */
+.hp-instagram {
+  background: #EDE5DC;
+  padding: 70px 20px;
+}
+
+.hp-instagram__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.hp-instagram__hashtag {
+  font-family: "Lato", sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #392F2C;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hp-instagram__heading {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #392F2C;
+  margin-bottom: 10px;
+}
+
+.hp-instagram__desc {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #392F2C;
+}
+
+.hp-instagram__widget {
+  min-width: 0; /* prevent grid blowout */
+}
+
+.hp-instagram__widget behold-widget {
+  display: block;
+  width: 100%;
+}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.hp-cta {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+}
+
+.hp-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 43, 31, 0.65);
+}
+
+.hp-cta__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hp-cta__heading {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.hp-footer {
+  background: #3D2B1F;
+  color: #F5F0EB;
+  padding: 50px 0 24px;
+}
+
+.hp-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0 0 32px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.hp-footer__logo img {
+  height: 36px;
+  width: auto;
+}
+
+.hp-footer__nav {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hp-footer__nav a {
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #F5F0EB;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.2s;
+}
+.hp-footer__nav a:hover {
+  opacity: 0.7;
+}
+
+.hp-footer__social {
+  display: flex;
+  gap: 16px;
+}
+
+.hp-footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(245, 240, 235, 0.15);
+  color: #F5F0EB;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.hp-footer__social a:hover {
+  background: rgba(245, 240, 235, 0.3);
+}
+
+.hp-footer__divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(245, 240, 235, 0.25);
+  margin: 0;
+}
+
+.hp-footer__bottom {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(245, 240, 235, 0.6);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hp-footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.hp-footer__links a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(245, 240, 235, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.hp-footer__links a:hover {
+  color: #F5F0EB;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet (<=1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .hp-header__nav {
+    display: none;
+  }
+  .hp-header__burger {
+    display: flex;
+  }
+
+  .hp-founder__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hp-founder__photo {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hp-founder__text-col {
+    text-align: center;
+  }
+
+  .hp-founder__quote-mark {
+    text-align: center;
+  }
+
+  .hp-process__steps {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hp-process__arrow {
+    display: none;
+  }
+
+  .hp-process__step {
+    flex: 0 0 calc(50% - 10px);
+    max-width: none;
+  }
+
+  .hp-instagram__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hp-footer__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hp-footer__nav {
+    position: static;
+    transform: none;
+    justify-content: center;
+  }
+
+  .hp-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (<=640px)
+   ============================================================ */
+@media (max-width: 640px) {
+  .hp-header__inner {
+    padding: 16px 20px;
+  }
+
+  .hp-header__logo img {
+    height: 32px;
+  }
+
+  .hp-hero {
+    height: 50vh;
+    min-height: 320px;
+  }
+
+  .hp-intro {
+    padding: 50px 16px;
+  }
+
+  .hp-intro__text {
+    font-size: 1rem;
+  }
+
+  .hp-section-title--script {
+    font-size: 1.8rem;
+  }
+
+  .hp-founder {
+    padding: 40px 16px 50px;
+  }
+
+  .hp-founder__quote-mark {
+    font-size: 3rem;
+  }
+
+  .hp-works {
+    padding: 50px 16px;
+  }
+
+  .hp-services {
+    padding: 80px 16px;
+  }
+
+  .hp-services__heading {
+    font-size: 1.6rem;
+  }
+
+  .hp-services__text {
+    font-size: 1rem;
+  }
+
+  .hp-process {
+    padding: 50px 16px;
+  }
+
+  .hp-process__step {
+    flex: 0 0 100%;
+  }
+
+  .hp-process__heading {
+    font-size: 1.8rem;
+  }
+
+  .hp-instagram {
+    padding: 50px 16px;
+  }
+
+  .hp-cta {
+    padding: 70px 16px;
+  }
+
+  .hp-cta__heading {
+    font-size: 1.3rem;
+  }
+
+  .hp-footer {
+    padding: 40px 0 20px;
+  }
+
+  .hp-footer__top {
+    padding: 0 20px;
+  }
+
+  .hp-footer__bottom {
+    padding: 20px 20px 0;
+  }
+
+  .hp-footer__nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS & TRANSITIONS
+   ============================================================ */
+
+/* ---------- Page load ---------- */
+.hp-body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.hp-body.hp-loaded {
+  opacity: 1;
+}
+
+/* ---------- Header scroll shadow ---------- */
+.hp-header {
+  transition: box-shadow 0.4s ease;
+}
+.hp-header--scrolled {
+  box-shadow: 0 2px 24px rgba(57, 47, 44, 0.08);
+}
+
+/* ---------- Hero overlay & text ---------- */
+.hp-hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(57, 47, 44, 0.1) 0%,
+    rgba(57, 47, 44, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hp-hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hp-hero__line {
+  display: block;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 64px);
+  color: #F5F0EB;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-hero__line--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Hero image slow zoom */
+.hp-hero__img {
+  animation: hp-heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes hp-heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+
+/* ---------- Scroll reveal system ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal].hp-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional children */
+[data-reveal-child="left"] {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-reveal-child="right"] {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-reveal-child].hp-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Process steps stagger ---------- */
+.hp-process__step {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-process__step.hp-step--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Process step card hover lift */
+.hp-process__step-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.hp-process__step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(57, 47, 44, 0.1);
+}
+
+/* ---------- Button micro-interactions ---------- */
+.hp-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(57, 47, 44, 0.06);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.hp-btn:hover::after {
+  transform: scaleX(1);
+}
+.hp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(57, 47, 44, 0.12);
+}
+
+/* ---------- Works card refined hover ---------- */
+.hp-works__card-img-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-works__card-overlay {
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-works__card-img-wrapper:hover img {
+  transform: scale(1.06);
+}
+
+/* ---------- Founder image hover ---------- */
+.hp-founder__photo {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp-founder__image-col:hover .hp-founder__photo {
+  transform: scale(1.02);
+}
+
+/* Founder quote mark float animation */
+.hp-founder__quote-mark {
+  animation: hp-floatQuote 4s ease-in-out infinite;
+}
+
+@keyframes hp-floatQuote {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ---------- Services / CTA parallax sections ---------- */
+.hp-services,
+.hp-cta {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Services overlay gradient */
+.hp-services__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(57, 47, 44, 0.55) 0%,
+    rgba(57, 47, 44, 0.75) 100%
+  );
+}
+
+.hp-cta__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(57, 47, 44, 0.5) 0%,
+    rgba(57, 47, 44, 0.72) 100%
+  );
+}
+
+/* ---------- Footer social hover ---------- */
+.hp-footer__social a {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.hp-footer__social a:hover {
+  background: rgba(245, 240, 235, 0.3);
+  transform: translateY(-3px);
+}
+
+/* ---------- Header nav — no underlines ---------- */
+.hp-header__nav-link {
+  text-decoration: none;
+}
+.hp-header__nav-link:hover,
+.hp-header__nav-link--active {
+  opacity: 0.7;
+}
+
+/* ---------- Decorative dividers ---------- */
+.hp-intro::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: rgba(245, 240, 235, 0.4);
+  margin: 0 auto 40px;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+.hp-intro.hp-revealed::before {
+  transform: scaleX(1);
+}
+
+/* ---------- Smooth global scroll ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Reduce motion for accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal],
+  [data-reveal-child],
+  .hp-process__step,
+  .hp-hero__line {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hp-body {
+    opacity: 1 !important;
+  }
+}
+
+/* ============================================================
+   MOBILE CARD LABELS — homepage works cards
+   Always-visible overlay on touch devices
+   ============================================================ */
+@media (hover: none) {
+  .hp-works__card-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(61, 43, 31, 0.92) 0%,
+      rgba(61, 43, 31, 0.15) 60%,
+      transparent 100%
+    );
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px 22px;
+  }
+  .hp-works__card-desc { display: none; }
+  .hp-works__card-btn  { display: none; }
+  .hp-works__card-name { margin: 0 0 4px; font-size: 1.1rem; }
+  .hp-works__card-year { font-size: 0.72rem; margin: 0 0 6px; }
+}
+
+/* ============================================================
+   SWIPER — Selected Works pagination dots
+   ============================================================ */
+.hp-works__swiper-pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hp-works__swiper-pagination .swiper-pagination-bullet {
+  width: 6px; height: 6px;
+  background: #BA6B57;
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hp-works__swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.4);
+}

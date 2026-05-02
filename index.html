@@ -3,14 +3,69 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>VB Studio</title>
-    <link rel="icon" href="img/assets/media/VB-Transparent-bg.png" type="image/x-icon" />
+    <title>VB Studio | Interior Design Studio by Vaishnavi Baheti</title>
+    <link rel="icon" href="img/assets/media/homePage/vb-logo.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons"/>
-    <link rel="stylesheet" href="css/vendor.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+
+    <!-- SEO -->
+    <meta name="description" content="VB Studio is a refined interior design practice by Vaishnavi Baheti, crafting residential and commercial spaces that are thoughtful, functional, and built to endure."/>
+    <meta name="keywords" content="interior design, VB Studio, Vaishnavi Baheti, residential interior design, commercial interior design, luxury interiors, bespoke interior design"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://www.vbstudiodesigns.com/"/>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="VB Studio"/>
+    <meta property="og:title" content="VB Studio | Interior Design Studio by Vaishnavi Baheti"/>
+    <meta property="og:description" content="VB Studio is a refined interior design practice by Vaishnavi Baheti, crafting residential and commercial spaces that are thoughtful, functional, and built to endure."/>
+    <meta property="og:url" content="https://www.vbstudiodesigns.com/"/>
+    <meta property="og:image" content="https://www.vbstudiodesigns.com/img/assets/media/homePage/landing-main-2.jpg"/>
+    <meta property="og:image:alt" content="VB Studio — Refined Interior Design"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="VB Studio | Interior Design Studio by Vaishnavi Baheti"/>
+    <meta name="twitter:description" content="VB Studio is a refined interior design practice by Vaishnavi Baheti, crafting residential and commercial spaces that are thoughtful, functional, and built to endure."/>
+    <meta name="twitter:image" content="https://www.vbstudiodesigns.com/img/assets/media/homePage/landing-main-2.jpg"/>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InteriorDesigner",
+      "name": "VB Studio",
+      "description": "A refined interior design practice crafting residential and commercial spaces that are thoughtful, functional, and built to endure.",
+      "url": "https://www.vbstudiodesigns.com",
+      "logo": "https://www.vbstudiodesigns.com/img/assets/media/homePage/vb-logo.png",
+      "image": "https://www.vbstudiodesigns.com/img/assets/media/homePage/landing-main-2.jpg",
+      "founder": {
+        "@type": "Person",
+        "name": "Vaishnavi Baheti",
+        "jobTitle": "Founder & Principal Designer"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://www.vbstudiodesigns.com/contact-us.html"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preload" as="image" href="img/assets/media/homePage/landing-main-2.jpg" fetchpriority="high"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Lato:wght@300;400;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@200;300;400;500;600&display=swap"/>
+    <link rel="stylesheet" href="css/homepage.css"/>
+    <link rel="stylesheet" href="css/about.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Behold.so Instagram widget -->
+    <script>
+      (() => {
+        const d = document, s = d.createElement('script');
+        s.type = 'module';
+        s.src = 'https://w.behold.so/widget.js';
+        d.head.append(s);
+      })();
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <!-- ICONS-->
     <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png"/>
@@ -22,279 +77,485 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png"/>
     <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png"/>
     <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png"/>
-    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     <link rel="manifest" href="img/content/manifest.json"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png"/>
-    <meta name="theme-color" content="#ffffff"/>
+    <meta name="theme-color" content="#F5F0EB"/>
   </head>
-  <body data-barba="wrapper">
-    <!-- Loading Spinner-->
-    <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-    </svg>
-    <!-- - Loading Spinner-->
-    <!-- Cursor follower-->
-    <div class="cursor" id="js-cursor">
-      <div class="cursor__follower">
-        <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <circle id="inner" cx="50" cy="50" r="40"></circle>
-          <circle id="outter" cx="50" cy="50" r="40"></circle>
-        </svg>
-      </div>
-    </div>
-    <!-- - Cursor follower-->
-    <!-- Project hover backgrounds-->
-    <div class="project-backgrounds">
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-1.jpg" data-background-for="1"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-2.jpg" data-background-for="2"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-3.jpg" data-background-for="3"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-4.jpg" data-background-for="4"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-5.jpg" data-background-for="5"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-6.jpg" data-background-for="6"></div>
-      <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-7.jpg" data-background-for="7"></div>
-      <div class="project-backgrounds__overlay overlay overlay_dark"></div>
-    </div>
-    <!-- - Project hover backgrounds-->
-    <!-- PAGE PRELOADER -->
-    <div class="preloader">
-      <div class="preloader__curtain bg-dark-2"></div>
-    </div>
-    <!-- - PAGE PRELOADER -->
-    <!-- PAGE HEADER -->
-    <header class="header header_fixed container-fluid bg-dark-3">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-auto header__col-left"><a class="logo" href="index.html">
-          <div class="lazy"><img data-src="img/assets/media/logo.png" src="#" alt=""/></div></a>
+  <body class="hp-body" data-page="home">
+
+    <!-- Header injected by shared.js -->
+    <div id="header-placeholder"></div>
+
+    <main class="hp-main">
+
+      <!-- HERO SECTION -->
+      <section class="hp-hero">
+        <img class="hp-hero__img" src="img/assets/media/homePage/landing-main-2.jpg" alt="VB Studio Interior Design" fetchpriority="high" loading="eager"/>
+        <div class="hp-hero__overlay">
+          <div class="hp-hero__text">
+            <span class="hp-hero__line">Designing spaces</span>
+            <span class="hp-hero__line">that feel like home</span>
+          </div>
+
         </div>
-        <div class="col-auto header__col-right">
-          <div class="header__burger" id="js-burger">
-            <div class="header__burger-line"></div>
-            <div class="header__burger-line"></div>
+      </section>
+
+      <!-- INTRODUCTION SECTION -->
+      <section class="hp-intro" data-reveal>
+        <div class="hp-intro__inner">
+          <h2 class="hp-section-title hp-section-title--script">Introduction</h2>
+          <p class="hp-intro__text">
+            VB Studio is an interior design practice focused on creating spaces that are refined, functional, and built to endure.
+            Our work is driven by a structured approach, balancing design clarity, material understanding, and precise execution. Each project is
+            carefully developed to ensure it performs as well as it looks.<br><br>
+            From residential to commercial spaces, the studio delivers environments that are cohesive, considered, and aligned with the client's
+            requirements.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOUNDER QUOTE SECTION -->
+      <section class="hp-founder" data-reveal>
+        <div class="hp-founder__inner">
+          <div class="hp-founder__image-col" data-reveal-child="left">
+            <img src="img/assets/media/homePage/founder-image.jpg" alt="Vaishnavi Baheti" class="hp-founder__photo"/>
+          </div>
+          <div class="hp-founder__text-col" data-reveal-child="right">
+            <div class="hp-founder__quote-mark">&ldquo;</div>
+            <p class="hp-founder__quote">
+              VB Studio began with a single intention: to design spaces that truly reflect the people who live in them.
+              Not trends. Not a fixed style. But real personalities, real lifestyles, and real stories.
+            </p>
+            <p class="hp-founder__quote">
+              For me, every project is deeply personal. I take the time to understand how you live, what matters to
+              you, and how your space can support that in the most effortless way. Because good design goes beyond
+              aesthetics &mdash; it lives in the details, the thought behind every decision, and the way a space feels when you
+              live in it.
+            </p>
+            <p class="hp-founder__signature">Vaishnavi Baheti</p>
+            <p class="hp-founder__title">Founder &amp; Principal Designer, VB studio</p>
           </div>
         </div>
-      </div>
-      <div class="header__wrapper-overlay-menu">
-        <div class="header__overlay-menu-back material-icons" id="js-submenu-back">arrow_back</div>
-        <div class="header__wrapper-menu">
-          <ul class="menu-overlay js-menu-overlay">
-            <li><a href="index.html" data-pjax-link="overlayMenu">
-                <div class="menu-overlay__item-wrapper"><span class="split-chars">Home</span></div></a>
-            </li>
-            <li><a href="about.html" data-pjax-link="overlayMenu">
-                <div class="menu-overlay__item-wrapper"><span class="split-chars">About Us</span></div></a>
-            </li>
-            <li><a href="portfolio.html" data-pjax-link="overlayMenu">
-              <div class="menu-overlay__item-wrapper"><span class="split-chars">Portfolio</span></div></a>
-          </li>
-            <li><a href="contacts.html" data-pjax-link="overlayMenu">
-                <div class="menu-overlay__item-wrapper"><span class="split-chars">Contact</span></div></a>
-            </li>
-          </ul>
-        </div>
-        <!-- - menu -->
-        <div class="header__wrapper-overlay-widgets color-white bg-dark-3">
-          <div class="header__wrapper-property">
-            <div class="figure-property">
-              <div class="figure-property__wrapper-heading">
-                <h6 class="split-text">E-mail</h6>
-              </div>
-              <div class="figure-property__content">
-                <ul class="figure-property__list">
-                  <li class="figure-property__item">
-                    <div class="split-text"><a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="header__wrapper-property">
-            <div class="figure-property">
-              <div class="figure-property__wrapper-heading">
-                <h6 class="split-text">Servicable Locations</h6>
-              </div>
-              <div class="figure-property__content">
-                <ul class="figure-property__list">
-                  <li class="figure-property__item">
-                    <div class="split-text">Pune <br>Mumbai </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- - information -->
-      </div>
-    </header>
-    <!-- - PAGE HEADER -->
-    <!-- PAGE MAIN-->
-    <main class="page-wrapper bg-blue-grey" id="js-smooth-scroll" data-barba="container" data-barba-namespace="dark">
-      <!-- section MASTHEAD -->
-      <!-- <section class="section section-masthead section-masthead_fullheight section-fullheight color-white" data-os-animation="data-os-animation">
-        <div class="section-fullheight__inner section-masthead__inner">
-          <div class="container-fluid">
-          </header>
-          <div class="row section-masthead__properties section-masthead__properties_bottom">
-              <div class="section-masthead__wrapper-property">
-                <div class="figure-property">
-                  <div class="figure-property__wrapper-heading">
-                    <h5 class="split-text">We believe in crafting spaces that tell a story — <span class = "color-red">YOUR STORY</span></h5>
+      </section>
+
+      <!-- SELECTED WORKS SECTION -->
+      <section class="hp-works" data-reveal>
+        <h2 class="hp-section-title hp-section-title--script">Selected works</h2>
+        <div class="hp-works__carousel-wrapper">
+          <button class="hp-works__arrow hp-works__arrow--left" id="works-prev" aria-label="Previous">&#8249;</button>
+          <div class="swiper hp-works__swiper">
+            <div class="swiper-wrapper">
+
+              <!-- Card 1: Apartment 14 -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=1">
+                  <img src="img/assets/project1/01.jpg" alt="Apartment 14" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2024</span>
+                    <h3 class="hp-works__card-name">Apartment 14</h3>
+                    <p class="hp-works__card-desc">A meticulously designed 4-bedroom, 2900 sqft apartment where modernity meets neo-classical elegance in every considered detail.</p>
+                    <span class="hp-works__card-btn">View Project</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-masthead__background section-masthead__background_fullscreen" data-art-parallax="data-art-parallax" data-art-parallax-factor="0.3">
-          <div class="art-parallax__bg lazy-bg" data-src="img/assets/media/home_page/banner.png"></div>
-        </div>
-      </section> -->
-      <section class="section image-container">
-        <picture>
-          <source media="(max-width: 991px)" srcset="img/assets/media/home-banner-mobile.png">
-          <img class="lazy-bg" data-src="img/assets/media/home-banner-desktop.png"></img>
-        </picture>
-      </section>
-      <!-- - section MASTHEAD -->
-      <!-- section CONTENT #1 -->
-      <section class="section section-content section_pt-large section_pb-small bg-dark-3" data-os-animation="data-os-animation">
-        <div class="container section-content__container">
-          <div class="row justify-content-between section-content__row">
-            <div class="section-content__inner section-content__inner_text">
-              <h5 class="heading-light color-white desc-text text-center">VB Studio's design philosophy is rooted in the belief that spaces should be transformative, functional, and deeply personal. Every project is approached with a focus on innovation, sustainability, and a deep understanding of the client’s unique vision</h5>
-              <br/>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section CONTENT #1 -->
-      <!-- section CONTENT #2 -->
-      <section class="section section-figures container-fluid bg-dark-3">
-        <header class="row section__header">
-          <div class="col color-red text-center">
-            <h2>Our Work</h2>
-            <br>
-            <br>
-          </div>
-        </header>
-        <div class="gallery">
-          <img src="img/assets/media/portfolio/Desktop/Banner.png" class="img home-1">
-          <img src="img/assets/media/portfolio/Desktop/row7-2.png" class="img home-2">
-          <img src="img/assets/media/portfolio/Desktop/row1-3.png" class="img home-3">
-          <img src="img/assets/media/portfolio/Desktop/row7-1.png" class="img home-4">
-          <img src="img/assets/media/portfolio/Desktop/row1-2.png" class="img home-5">
-          <img src="img/assets/media/portfolio/Desktop/row7-3.png" class="img home-6">
-        </div>
-      </section>
-      <!-- - section CONTENT #2 -->
-      <!-- section IMAGE #1 -->
-      <section class="section section-image section_pt bg-dark-3">
-        <div class="container">
-          <header class="row section__header">
-            <div class="col color-red text-center">
-              <h2>Our Process</h2>
-              <br>
-            </div>
-          </header>
-          <div class="post__media">
-            <picture>
-              <source media="(max-width: 991px)" srcset="img/assets/media/VB-stepbystep.png">
-              <img src="img/assets/media/home_page/home-process.png" alt=""/>
-            </picture>
-          </div>
-          <br>
-          <br>
-        </div>
-      </section>
-      <!-- - section IMAGE #1 -->
-      <!-- section PUBLICATIONS AWARDS -->
-      <section class="section section-content bg-light section_pt section_pb bg-dark-3" data-os-animation="data-os-animation">
-        <div class="container section-content__container">
-          <div class="row justify-content-between section-content__row">
-            <header class="col-lg-4 section__header section-content__inner_header color-red">
-              <h3 class="split-chars color-red">Publications & Awards</h3>
-              <div class="section__headline"></div>
-            </header>
-            <div class="col-lg-8 section-content__inner section-content__inner_text">
-              <div class="heading-light color-white desc-text">
-                <ul>
-                  <li>
-                    Homepublication
-                  </li>
-                  <li>
-                    Architects and Interiors India 
-                  </li>
-                  <li>
-                    30 Under 30 Rising & Creative Interior Designer of the Year, India 
-                  </li>
-                  <li>
-                    Promising Interior Design Firm of the Year 2024, India (Awarded by the National Architecture and Interior Design Excellence Awards 2024 (GLOBAL EDITION).
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      <br>
-      <br>
-      <br>
-      </section>
-      <!-- - section TEAM -->
-      <footer class="footer container-fluid">
-        <div class="footer__area-primary">
-          <div class="row">
-            <div class="col-lg-4 footer__col">
-              <section class="widget widget_ruben_logo"><a class="logo" href="index.html">
-                  <div class="logo__text">VB Studio</div>
                 </a>
-                <p>VB Studio is a dynamic and innovative design firm, specializing in residential and commercial projects
-                </p>
-              </section>
-              <br />
-              <section class="widget widget_ruben_social">
-                <ul class="social">
-                  <li class="social__item"><a class="fa fa-envelope-o" href="mailto:vbstudiodesigns@gmail.com"></a></li>
-                  <li class="social__item"><a class="fa fa-instagram" href="https://www.instagram.com/vbstudiodesigns"></a></li>
-                  <li class="social__item"><a class="fa fa-whatsapp" href="https://wa.me/+918010356912?text=Hi%20Vaishnavi%2C%20I%20wanted%20to%20get%20in%20touch%20regarding%20--"></a></li>
-                </ul>
-              </section>
+              </div>
+
+              <!-- Card 2: The Ivory Residence -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=2">
+                  <img src="img/assets/project2/LIVING ROOM VIEW 1.jpg" alt="The Ivory Residence" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2025</span>
+                    <h3 class="hp-works__card-name">The Ivory Residence</h3>
+                    <p class="hp-works__card-desc">An opulent luxury residence where grandeur meets warmth — formal living and dining spaces crafted with meticulous refinement for the discerning few.</p>
+                    <span class="hp-works__card-btn">View Project</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 3: The Bloom Retreat -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=3">
+                  <img src="img/assets/project3/BEDROOM VIEW 1.jpg" alt="The Bloom Retreat" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2026</span>
+                    <h3 class="hp-works__card-name">The Bloom Retreat</h3>
+                    <p class="hp-works__card-desc">A private luxury holiday sanctuary where beautifully appointed bedrooms invite total escape — serene, indulgent, and deeply restorative.</p>
+                    <span class="hp-works__card-btn">View Project</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 4: The Zen Oasis -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=4">
+                  <img src="img/assets/project4/E_MKGs_HR-1.jpg" alt="The Zen Oasis" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2023</span>
+                    <h3 class="hp-works__card-name">The Zen Oasis</h3>
+                    <p class="hp-works__card-desc">A 4BHK zen sanctuary of 2900 sqft — natural materials, warm textures, and a harmonious palette create a refuge of comfort and elegance.</p>
+                    <span class="hp-works__card-btn">View Project</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 5: Casa Bonita -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=5">
+                  <img src="img/assets/project5/DSC_9707.jpg" alt="Casa Bonita" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2024</span>
+                    <h3 class="hp-works__card-name">Casa Bonita</h3>
+                    <p class="hp-works__card-desc">A bright, breezy home designed around ease — soft layers, subtle colour, and clean lines, calm yet expressive and quietly refined.</p>
+                    <span class="hp-works__card-btn">View Project</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 6: Dixit Residence -->
+              <div class="swiper-slide hp-works__card">
+                <a class="hp-works__card-img-wrapper" href="project.html?project=6">
+                  <img src="img/assets/project6/E_MKGs_HR-2.jpg" alt="Dixit Residence" loading="lazy" decoding="async"/>
+                  <div class="hp-works__card-overlay">
+                    <span class="hp-works__card-year">2022</span>
+                    <h3 class="hp-works__card-name">Dixit Residence</h3>
+                    <p class="hp-works__card-desc">A family home where warmth and understated elegance converge — rich textures, bespoke details, and a personal palette at every turn.</p>
+                    <span class="hp-works__card-btn">View Project</span>
+                  </div>
+                </a>
+              </div>
+
             </div>
-            <div class="col-lg-4 footer__col">
-              <section class="widget widget_ruben_logo">
-                <h6>Address</h6>
-                <h6>Pune</h6>
-                <p>7th floor, Icon tower, Baner road, Baner, Pune - 411045</p>
-                <h6>Mumbai</h6>
-                <p>Peninsula Towers, Peninsula Corporate Park, Lower Parel, Mumbai - 400013</p>
-              </section>
+            <div class="hp-works__swiper-pagination swiper-pagination"></div>
+          </div>
+          <button class="hp-works__arrow hp-works__arrow--right" id="works-next" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="hp-works__cta">
+          <a href="portfolio.html" class="hp-btn hp-btn--outline">View Portfolio</a>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section class="hp-services" data-reveal style="background-image: url('img/assets/media/homePage/services-background.jpg');" data-parallax>
+        <div class="hp-services__overlay"></div>
+        <div class="hp-services__content">
+          <h2 class="hp-services__heading">SERVICES</h2>
+          <p class="hp-services__text">
+            We approach design with clarity and intent, understanding that every space has a purpose beyond aesthetics.<br>
+            By focusing on how a space is experienced, not just how it looks, we create environments that are both functional and enduring.
+          </p>
+          <a href="about-us.html" class="hp-btn hp-btn--cream">Explore More</a>
+        </div>
+      </section>
+
+      <!-- DESIGN PROCESS SECTION -->
+      <section class="hp-process" data-reveal>
+        <div class="hp-process__inner">
+          <h2 class="hp-process__heading">The Design Process</h2>
+          <p class="hp-process__subtitle">YOUR BRIEF &middot; OUR APPROACH &middot; YOUR REALITY</p>
+          <div class="hp-process__steps">
+            <div class="hp-process__step">
+              <div class="hp-process__step-card">
+                <span class="hp-process__step-num">01</span>
+                <h4 class="hp-process__step-title">Understanding</h4>
+              </div>
+              <p class="hp-process__step-desc">We begin by understanding your lifestyle, needs, and the way you envision your space.</p>
             </div>
-            <div class="col-lg-4 footer__col">
-              <section class="widget widget_ruben_contacts">
-                <p style="font-weight: bold;">Email</p>
-                <p><a href="mailto:vbstudiodesigns@gmail.com">vbstudiodesigns@gmail.com</a></p>
-                <p style="font-weight: bold;">Phone</p>
-                <p>+91 8010356912</p>
-              </section>
+            <div class="hp-process__arrow">&rsaquo;</div>
+            <div class="hp-process__step">
+              <div class="hp-process__step-card">
+                <span class="hp-process__step-num">02</span>
+                <h4 class="hp-process__step-title">Concept &amp; Design</h4>
+              </div>
+              <p class="hp-process__step-desc">A clear design direction is developed, translating ideas into layouts, materials, and aesthetics.</p>
+            </div>
+            <div class="hp-process__arrow">&rsaquo;</div>
+            <div class="hp-process__step">
+              <div class="hp-process__step-card">
+                <span class="hp-process__step-num">03</span>
+                <h4 class="hp-process__step-title">Detailing &amp; Selections</h4>
+              </div>
+              <p class="hp-process__step-desc">Every element is planned and executed with precision, in coordination with trusted partners.</p>
+            </div>
+            <div class="hp-process__arrow">&rsaquo;</div>
+            <div class="hp-process__step">
+              <div class="hp-process__step-card">
+                <span class="hp-process__step-num">04</span>
+                <h4 class="hp-process__step-title">Completion &amp; Handover</h4>
+              </div>
+              <p class="hp-process__step-desc">A refined, fully realised space, ready to be experienced.</p>
             </div>
           </div>
         </div>
-        <div class="footer__area-secondary">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-12 footer__col">
-              <section class="widget widget_ruben_copyright"><small>© 2024 VB</small>
-              </section>
-            </div>
+      </section>
+
+      <!-- INSTAGRAM / BTS SECTION -->
+      <section class="hp-instagram" data-reveal>
+        <div class="hp-instagram__inner">
+          <div class="hp-instagram__text-col">
+            <span class="hp-instagram__hashtag">#BTS</span>
+            <h3 class="hp-instagram__heading">INSTAGRAM</h3>
+            <p class="hp-instagram__desc">A closer look at our process, site progress, and design details.</p>
+          </div>
+          <div class="hp-instagram__widget">
+            <behold-widget feed-id="MaaI45nsUKMnX5I4IU0E"></behold-widget>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="hp-cta" data-reveal style="background-image: url('img/assets/media/homePage/get-in-touch-background.jpg');" data-parallax>
+        <div class="hp-cta__overlay"></div>
+        <div class="hp-cta__content">
+          <h2 class="hp-cta__heading">Start your project with a consultation</h2>
+
+          <form id="hp-contact-form" class="ab-form" novalidate autocomplete="on">
+
+            <div class="ab-form__group">
+              <label class="ab-form__label" for="hp-name">Your name</label>
+              <input
+                class="ab-form__input"
+                id="hp-name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                autocomplete="name"
+              />
+              <span class="ab-form__error" id="hp-name-error" role="alert"></span>
+            </div>
+
+            <div class="ab-form__group">
+              <label class="ab-form__label" for="hp-mobile">Your mobile number</label>
+              <input
+                class="ab-form__input"
+                id="hp-mobile"
+                name="mobile"
+                type="tel"
+                placeholder="Your mobile number"
+                autocomplete="tel"
+              />
+              <span class="ab-form__error" id="hp-mobile-error" role="alert"></span>
+            </div>
+
+            <div class="ab-form__group">
+              <label class="ab-form__label" for="hp-email">Your e-mail</label>
+              <input
+                class="ab-form__input"
+                id="hp-email"
+                name="email"
+                type="email"
+                placeholder="Your e-mail"
+                autocomplete="email"
+              />
+              <span class="ab-form__error" id="hp-email-error" role="alert"></span>
+            </div>
+
+            <div class="ab-form__group">
+              <label class="ab-form__label" for="hp-message">Your message</label>
+              <textarea
+                class="ab-form__input ab-form__textarea"
+                id="hp-message"
+                name="message"
+                placeholder="Your message"
+                rows="3"
+                maxlength="1000"
+              ></textarea>
+              <span class="ab-form__char-count" id="hp-message-count" aria-live="polite">0 / 1000</span>
+              <span class="ab-form__error" id="hp-message-error" role="alert"></span>
+            </div>
+
+            <div class="ab-form__submit">
+              <button type="submit" class="hp-btn hp-btn--cream">Get in touch now</button>
+            </div>
+
+          </form>
+
+          <div class="ab-form__success" id="hp-form-success" role="status" aria-live="polite">
+            Thank you &mdash; we&rsquo;ll be in touch with you soon.
+          </div>
+
+        </div>
+      </section>
+
     </main>
-    <canvas id="js-webgl"></canvas>
-    <!-- - PAGE MAIN-->
-    <!-- VENDOR SCRIPTS -->
-    <script src="js/vendor.js"></script>
-    <!-- - VENDOR SCRIPTS -->
-    <!-- COMPONENTS -->
-    <script src="js/components.js"></script>
-    <!-- - COMPONENTS -->
+
+    <!-- Footer injected by shared.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init('SFWDLz1SIcJ4jUd7u');</script>
+    <!-- Vendor: Swiper, GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Shared: header/footer injection, mobile menu, scroll-reveal, scroll shadow -->
+    <script src="js/shared.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/gsap-animations.js"></script>
+
+    <!-- Homepage-specific interactions -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+        /* ── Hero text stagger entrance ── */
+        var heroLines = document.querySelectorAll('.hp-hero__line');
+        heroLines.forEach(function(line, i) {
+          setTimeout(function() {
+            line.classList.add('hp-hero__line--visible');
+          }, 600 + i * 350);
+        });
+
+        /* ── Works carousel — Swiper ── */
+        if (typeof Swiper !== 'undefined') {
+          new Swiper('.hp-works__swiper', {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            loop: true,
+            speed: 700,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            },
+            navigation: {
+              prevEl: '#works-prev',
+              nextEl: '#works-next',
+            },
+            pagination: {
+              el: '.hp-works__swiper-pagination',
+              clickable: true,
+            },
+            breakpoints: {
+              0:    { slidesPerView: 1.2, spaceBetween: 16 },
+              640:  { slidesPerView: 2,   spaceBetween: 20 },
+              1024: { slidesPerView: 3,   spaceBetween: 24 },
+            },
+          });
+        }
+
+        /* ── Parallax backgrounds ── */
+        var parallaxEls = document.querySelectorAll('[data-parallax]');
+        if (parallaxEls.length) {
+          window.addEventListener('scroll', function() {
+            var scrollY = window.pageYOffset;
+            parallaxEls.forEach(function(el) {
+              var rect  = el.getBoundingClientRect();
+              var yPos  = -(rect.top * 0.3);
+              el.style.backgroundPositionY = yPos + 'px';
+            });
+          }, { passive: true });
+        }
+
+        /* ── Process steps stagger ── */
+        var processSteps = document.querySelectorAll('.hp-process__step');
+        var stepObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.parentElement.querySelectorAll('.hp-process__step').forEach(function(step, i) {
+                setTimeout(function() { step.classList.add('hp-step--visible'); }, i * 200);
+              });
+              stepObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        if (processSteps.length) stepObserver.observe(processSteps[0]);
+
+
+
+        /* ── CTA contact form validation ── */
+        var ctaForm       = document.getElementById('hp-contact-form');
+        var ctaSuccessMsg = document.getElementById('hp-form-success');
+        if (ctaForm) {
+
+          function hpShowError(id, msg) {
+            var input   = document.getElementById(id);
+            var errorEl = document.getElementById(id + '-error');
+            if (input)   input.classList.add('ab-form__input--error');
+            if (errorEl) { errorEl.textContent = msg; errorEl.classList.add('ab-form__error--visible'); }
+          }
+
+          function hpClearError(id) {
+            var input   = document.getElementById(id);
+            var errorEl = document.getElementById(id + '-error');
+            if (input)   input.classList.remove('ab-form__input--error');
+            if (errorEl) errorEl.classList.remove('ab-form__error--visible');
+          }
+
+          ['hp-name', 'hp-mobile', 'hp-email', 'hp-message'].forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) el.addEventListener('input', function() { hpClearError(id); });
+          });
+
+          var hpMsgEl   = document.getElementById('hp-message');
+          var hpCountEl = document.getElementById('hp-message-count');
+          if (hpMsgEl && hpCountEl) {
+            hpMsgEl.addEventListener('input', function() {
+              var len = hpMsgEl.value.length;
+              hpCountEl.textContent = len + ' / 1000';
+              hpCountEl.style.color = len >= 1000 ? '#E8A090' : len > 900 ? '#d4a574' : '';
+            });
+          }
+
+          ctaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            ['hp-name', 'hp-mobile', 'hp-email', 'hp-message'].forEach(hpClearError);
+
+            var name    = document.getElementById('hp-name').value.trim();
+            var mobile  = document.getElementById('hp-mobile').value.trim();
+            var email   = document.getElementById('hp-email').value.trim();
+            var message = document.getElementById('hp-message').value.trim();
+            var valid   = true;
+
+            if (!name) {
+              hpShowError('hp-name', 'Please enter your name.');
+              valid = false;
+            }
+            if (!mobile) {
+              hpShowError('hp-mobile', 'Please enter your mobile number.');
+              valid = false;
+            } else if (!/^\+?[\d\s\-()+]{7,20}$/.test(mobile) || mobile.replace(/\D/g, '').length < 10) {
+              hpShowError('hp-mobile', 'Please enter a valid mobile number (minimum 10 digits).');
+              valid = false;
+            }
+            if (!email) {
+              hpShowError('hp-email', 'Please enter your email address.');
+              valid = false;
+            } else if (!/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(email)) {
+              hpShowError('hp-email', 'Please enter a valid email address.');
+              valid = false;
+            }
+            if (!message) {
+              hpShowError('hp-message', 'Please enter a message.');
+              valid = false;
+            } else if (message.length > 1000) {
+              hpShowError('hp-message', 'Message must be 1000 characters or fewer.');
+              valid = false;
+            }
+
+            if (valid) {
+              var submitBtn = ctaForm.querySelector('button[type="submit"]');
+              submitBtn.disabled = true;
+              submitBtn.textContent = 'Sending…';
+              emailjs.send('service_dj4zfh6', 'template_rg6trrm', {
+                name: name,
+                mobile: mobile,
+                email: email,
+                message: message,
+                page: 'Home'
+              }).then(function () {
+                ctaForm.style.display = 'none';
+                ctaSuccessMsg.classList.add('ab-form__success--visible');
+              }, function () {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get in touch now';
+                hpShowError('hp-message', 'Something went wrong — please try again or email us directly.');
+              });
+            }
+          });
+        }
+
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title id="pr-page-title">Project — VB Studio</title>
+    <link rel="icon" href="img/assets/media/homePage/vb-logo.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="HandheldFriendly" content="true"/>
+
+    <!-- SEO -->
+    <meta name="description" content="Explore a VB Studio interior design project — a thoughtful, curated space designed by Vaishnavi Baheti for real people with real stories."/>
+    <meta name="robots" content="index, follow"/>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "VB Studio — Interior Design Project",
+      "description": "A curated interior design project by VB Studio, designed by Vaishnavi Baheti.",
+      "creator": {
+        "@type": "Person",
+        "name": "Vaishnavi Baheti",
+        "jobTitle": "Founder & Principal Designer, VB Studio"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VB Studio",
+        "url": "https://www.vbstudiodesigns.com"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Lato:wght@300;400;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@200;300;400;500;600&display=swap"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/homepage.css"/>
+    <link rel="stylesheet" href="css/project.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- Favicon / PWA icons -->
+    <link rel="apple-touch-icon" sizes="57x57"   href="img/content/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60"   href="img/content/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"   href="img/content/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76"   href="img/content/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/content/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/content/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png"/>
+    <link rel="manifest" href="img/content/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#F5F0EB"/>
+  </head>
+
+  <body class="hp-body" data-page="portfolio">
+
+    <!-- Header injected by shared.js -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ── Carousel ── -->
+      <section class="pr-carousel" id="pr-carousel" aria-label="Project images">
+
+        <!-- "Back to Portfolio" link -->
+        <a class="pr-back" href="portfolio.html">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>Portfolio</span>
+        </a>
+
+        <!-- Slides are injected by JS -->
+        <div class="pr-carousel__track" id="pr-track" role="list"></div>
+
+        <!-- Prev / Next -->
+        <button class="pr-carousel__btn pr-carousel__btn--prev" id="pr-prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="pr-carousel__btn pr-carousel__btn--next" id="pr-next" aria-label="Next image">
+          <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+
+        <!-- Counter + dots -->
+        <div class="pr-carousel__controls">
+          <span class="pr-carousel__counter" id="pr-counter">1 / 1</span>
+          <div class="pr-carousel__dots" id="pr-dots" role="tablist" aria-label="Slide navigation"></div>
+        </div>
+
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared: header injection, mobile menu, scroll-reveal, header shadow -->
+    <script src="js/shared.js"></script>
+    <script src="js/transitions.js"></script>
+
+    <!-- Project data + carousel logic -->
+    <script>
+      /* ── Project data ── */
+      var PROJECTS = {
+        1: {
+          name: 'Apartment 14',
+          year: '2024',
+          description: 'A seamless blend of modernity and neo-classical elegance in this meticulously designed 4-bedroom apartment, boasting a generous carpet area of 2900 sqft. This residence exemplifies sophisticated living with thoughtful design elements and luxurious touches.',
+          images: [
+            'img/assets/project1/01.jpg',
+            'img/assets/project1/02.jpg',
+            'img/assets/project1/03.jpg',
+            'img/assets/project1/04.jpg',
+            'img/assets/project1/05.jpg',
+            'img/assets/project1/06.jpg',
+            'img/assets/project1/07.jpg',
+            'img/assets/project1/09.jpg',
+            'img/assets/project1/10.jpg',
+            'img/assets/project1/11.jpg',
+            'img/assets/project1/12.jpg',
+            'img/assets/project1/13.jpg'
+          ]
+        },
+        2: {
+          name: 'The Ivory Residence',
+          year: '2025',
+          description: 'The Ivory Residence is a high-end luxury home where meticulous attention to detail and an impeccable sense of refinement define every space. From the elegant formal dining area to the gracious sun-filled living rooms, each space balances grandeur with warmth — premium materials and bespoke furnishings crafted for the discerning few.',
+          images: [
+            'img/assets/project2/LIVING ROOM VIEW 1.jpg',
+            'img/assets/project2/LIVING ROOM VIEW 2.jpg',
+            'img/assets/project2/DINING AREA VIEW 1.jpg'
+          ]
+        },
+        3: {
+          name: 'The Bloom Retreat',
+          year: '2026',
+          description: 'A luxury holiday home designed as a complete escape from the everyday. Five beautifully appointed bedrooms, each with its own distinct character, weave together comfort, privacy, and natural beauty — a retreat in the truest sense, serene, indulgent, and deeply restorative.',
+          images: [
+            'img/assets/project3/BEDROOM VIEW 1.jpg',
+            'img/assets/project3/BEDROOM VIEW 2.jpg',
+            'img/assets/project3/BEDROOM VIEW 3.jpg',
+            'img/assets/project3/BEDROOM VIEW 4.jpg',
+            'img/assets/project3/BEDROOM VIEW 5.jpg',
+            'img/assets/project3/WhatsApp Image 2025-09-04 at 1.22.54 PM.jpeg',
+            'img/assets/project3/WhatsApp Image 2025-09-04 at 1.22.55 PM.jpeg',
+            'img/assets/project3/WhatsApp Image 2025-09-04 at 1.22.55 PM (1).jpeg'
+          ]
+        },
+        4: {
+          name: 'The Zen Oasis',
+          year: '2023',
+          description: 'Located within a sprawling 2900 sqft carpet area, The Zen Oasis is a 4BHK residence that seamlessly blends contemporary aesthetics with a warm and inviting ambiance. Natural materials, rich textures, and a warm colour palette create a sanctuary of comfort and elegance.',
+          images: [
+            'img/assets/project4/E_MKGs_HR-1.jpg',
+            'img/assets/project4/E_MKGs_HR-4.jpg',
+            'img/assets/project4/E_MKGs_HR-6.jpg',
+            'img/assets/project4/E_MKGs_HR-9.jpg',
+            'img/assets/project4/E_MKGs_HR-10.jpg',
+            'img/assets/project4/E_MKGs_HR-14.jpg',
+            'img/assets/project4/E_MKGs_HR-16.jpg',
+            'img/assets/project4/E_MKGs_HR-17.jpg'
+          ]
+        },
+        5: {
+          name: 'Casa Bonita',
+          year: '2024',
+          description: 'Casa Bonita is a bright, breezy home designed around ease, balance, and thoughtful detailing. Soft layers, subtle colour, and clean lines come together to create spaces that feel calm yet expressive — comfort without compromising on elegance, personal, timeless, and quietly refined.',
+          images: [
+            'img/assets/project5/DSC_9707.jpg',
+            'img/assets/project5/DSC_9731.jpg',
+            'img/assets/project5/DSC_9747.jpg',
+            'img/assets/project5/DSC_9769.jpg',
+            'img/assets/project5/DSC_9876.jpg',
+            'img/assets/project5/DSC_9921.jpg',
+            'img/assets/project5/DSC_9945.jpg'
+          ]
+        },
+        6: {
+          name: 'Dixit Residence',
+          year: '2022',
+          description: 'The Dixit Residence is a thoughtfully curated family home where warmth, function, and understated elegance seamlessly converge. Rich textures, bespoke joinery, and a carefully considered palette reflect a deeply personal vision of refined living — a home that grows more beautiful with every day spent within its walls.',
+          images: [
+            'img/assets/project6/E_MKGs_HR-2.jpg',
+            'img/assets/project6/E_MKGs_HR-4.jpg',
+            'img/assets/project6/E_MKGs_HR-6.jpg',
+            'img/assets/project6/E_MKGs_HR-7.jpg',
+            'img/assets/project6/E_MKGs_HR-8.jpg',
+            'img/assets/project6/E_MKGs_HR-9.jpg',
+            'img/assets/project6/E_MKGs_HR-20.jpg'
+          ]
+        }
+      };
+
+      /* ── Read ?project= from URL ── */
+      function getProjectId() {
+        var params = new URLSearchParams(window.location.search);
+        var id = parseInt(params.get('project'), 10);
+        return PROJECTS[id] ? id : 1;
+      }
+
+      /* ── Build carousel ── */
+      (function () {
+        var id      = getProjectId();
+        var proj    = PROJECTS[id];
+        var track   = document.getElementById('pr-track');
+        var dotsEl  = document.getElementById('pr-dots');
+        var counter = document.getElementById('pr-counter');
+        var total   = proj.images.length;
+        var current = 0;
+
+        /* Page title */
+        document.getElementById('pr-page-title').textContent = proj.name + ' — VB Studio';
+
+        /* Build slides */
+        proj.images.forEach(function (src, i) {
+          var slide = document.createElement('div');
+          slide.className = 'pr-carousel__slide';
+          slide.setAttribute('role', 'listitem');
+          slide.setAttribute('aria-label', 'Image ' + (i + 1) + ' of ' + total);
+
+          var img = document.createElement('img');
+          img.className = 'pr-carousel__img';
+          img.src = src;
+          img.alt = proj.name + ' — image ' + (i + 1);
+          img.loading = i === 0 ? 'eager' : 'lazy';
+          img.decoding = 'async';
+          if (i === 0) img.fetchPriority = 'high';
+
+          var overlay = document.createElement('div');
+          overlay.className = 'pr-carousel__overlay';
+
+          slide.appendChild(img);
+          slide.appendChild(overlay);
+
+          /* Text block only on first slide */
+          if (i === 0) {
+            var textBlock = document.createElement('div');
+            textBlock.className = 'pr-carousel__text';
+            textBlock.innerHTML =
+              '<span class="pr-carousel__year">' + proj.year + '</span>' +
+              '<h1 class="pr-carousel__title">' + proj.name + '</h1>' +
+              '<p class="pr-carousel__desc">' + proj.description + '</p>';
+            slide.appendChild(textBlock);
+          }
+
+          track.appendChild(slide);
+        });
+
+        /* Build dots */
+        proj.images.forEach(function (_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'pr-carousel__dot' + (i === 0 ? ' pr-carousel__dot--active' : '');
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+          dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsEl.appendChild(dot);
+        });
+
+        /* Navigate */
+        function goTo(index) {
+          current = (index + total) % total;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+          counter.textContent = (current + 1) + ' / ' + total;
+
+          var dots = dotsEl.querySelectorAll('.pr-carousel__dot');
+          dots.forEach(function (d, i) {
+            d.classList.toggle('pr-carousel__dot--active', i === current);
+            d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+          });
+        }
+
+        /* Auto-play: advance every 3 s; pause on hover/focus/touch */
+        var autoTimer = setInterval(function () { goTo(current + 1); }, 3000);
+
+        function resetTimer() {
+          clearInterval(autoTimer);
+          autoTimer = setInterval(function () { goTo(current + 1); }, 3000);
+        }
+
+        /* Pause only while mouse is actively moving; resume shortly after it stops */
+        var mouseMoveTimeout = null;
+        var carousel = document.getElementById('pr-carousel');
+        carousel.addEventListener('mousemove', function () {
+          clearInterval(autoTimer);
+          clearTimeout(mouseMoveTimeout);
+          mouseMoveTimeout = setTimeout(function () { resetTimer(); }, 800);
+        });
+        carousel.addEventListener('mouseleave', function () {
+          clearTimeout(mouseMoveTimeout);
+          resetTimer();
+        });
+        carousel.addEventListener('focusin',    function () { clearInterval(autoTimer); });
+        carousel.addEventListener('focusout',   function () { resetTimer(); });
+
+        document.getElementById('pr-prev').addEventListener('click', function () { goTo(current - 1); resetTimer(); });
+        document.getElementById('pr-next').addEventListener('click', function () { goTo(current + 1); resetTimer(); });
+
+        /* Keyboard navigation */
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft')  { goTo(current - 1); resetTimer(); }
+          if (e.key === 'ArrowRight') { goTo(current + 1); resetTimer(); }
+        });
+
+        /* Touch / swipe */
+        var touchStartX = null;
+        carousel.addEventListener('touchstart', function (e) {
+          touchStartX = e.changedTouches[0].clientX;
+          clearInterval(autoTimer);
+        }, { passive: true });
+        carousel.addEventListener('touchend', function (e) {
+          if (touchStartX === null) return;
+          var dx = e.changedTouches[0].clientX - touchStartX;
+          if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+          touchStartX = null;
+          resetTimer();
+        }, { passive: true });
+
+        /* Initial counter */
+        counter.textContent = '1 / ' + total;
+      })();
+    </script>
+
+  </body>
+</html>
