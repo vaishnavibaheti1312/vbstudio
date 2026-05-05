@@ -45,7 +45,7 @@
 
 .pf-banner__title {
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.8rem);
   font-weight: 500;
   letter-spacing: 0.25em;
   color: #fff;
@@ -115,7 +115,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.45s ease;
+  transition: transform 0.3s ease;
 }
 
 /* ── Card hover overlay (matches homepage Selected Works style) ── */
@@ -196,7 +196,7 @@
   }
 
   .pf-banner__title {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -208,7 +208,7 @@
   }
 
   .pf-banner__title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     letter-spacing: 0.18em;
   }
 
@@ -229,7 +229,7 @@
 /* ── Responsive: mobile ── */
 @media (max-width: 480px) {
   .pf-banner__title {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     letter-spacing: 0.12em;
   }
 

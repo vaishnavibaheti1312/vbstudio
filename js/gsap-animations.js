@@ -39,7 +39,7 @@
     var chars = splitChars(el);
     ScrollTrigger.create({
       trigger: el,
-      start: 'top 80%',
+      start: 'top 95%',
       once: true,
       onEnter: function () {
         ensureParentRevealed(el);
@@ -61,7 +61,7 @@
   if (subtitle) {
     ScrollTrigger.create({
       trigger: subtitle,
-      start: 'top 82%',
+      start: 'top 95%',
       once: true,
       onEnter: function () {
         ensureParentRevealed(subtitle);
@@ -82,7 +82,7 @@
   if (servicesH) {
     ScrollTrigger.create({
       trigger: servicesH,
-      start: 'top 78%',
+      start: 'top 92%',
       once: true,
       onEnter: function () {
         gsap.from(servicesH, {
@@ -108,7 +108,7 @@
     var wordEls = ctaH.querySelectorAll('span');
     ScrollTrigger.create({
       trigger: ctaH,
-      start: 'top 80%',
+      start: 'top 95%',
       once: true,
       onEnter: function () {
         gsap.from(wordEls, {

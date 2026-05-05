@@ -44,11 +44,20 @@
         sectionObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 60px 0px' });
 
   function observeRevealEls(root) {
     (root || document).querySelectorAll('[data-reveal]').forEach(function (el) {
-      sectionObserver.observe(el);
+      /* If already in viewport on load, reveal immediately without waiting for IO */
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('hp-revealed');
+        el.querySelectorAll('[data-reveal-child]').forEach(function (child, i) {
+          setTimeout(function () { child.classList.add('hp-revealed'); }, 200 + i * 250);
+        });
+      } else {
+        sectionObserver.observe(el);
+      }
     });
   }
 
