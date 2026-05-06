@@ -262,12 +262,38 @@
 
 @media (max-width: 600px) {
   .ct-banner {
-    min-height: 180px;
-    height: 28vh;
-    padding: 0 20px;
+    min-height: 220px;
+    height: 34vh;
+    padding: 40px 24px;
+  }
+  .ct-banner__title {
+    font-size: 1.6rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 16px;
   }
   .ct-banner__subtitle {
     white-space: normal;
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+  .ct-contact {
+    min-height: 62vh;
+  }
+  .ct-contact__inner {
+    padding: 56px 28px;
+  }
+  .ct-contact__script {
+    font-size: clamp(28px, 7vw, 40px);
+    margin-bottom: 8px;
+  }
+  .ct-contact__name {
+    font-size: clamp(24px, 5.5vw, 32px);
+    margin-bottom: 20px;
+  }
+  .ct-contact__detail {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
   }
   .ct-form-card {
     padding: 36px 20px;
