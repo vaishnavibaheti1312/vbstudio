@@ -115,7 +115,10 @@
         1: {
           name: 'Apartment 14',
           year: '2024',
-          description: 'A seamless blend of modernity and neo-classical elegance in this meticulously designed 4-bedroom apartment, boasting a generous carpet area of 2900 sqft. This residence exemplifies sophisticated living with thoughtful design elements and luxurious touches.',
+          description: [
+            'A seamless blend of modernity and neo-classical elegance defines this meticulously designed 4-bedroom apartment, boasting a generous carpet area of 2900 sqft. Designed for a young family with a strong appreciation for bold yet refined interiors, the home balances striking visual elements with everyday functionality.',
+            'Rich accents, statement finishes, and brighter tones bring character to the space, while clean lines and restrained detailing maintain a sense of balance throughout. Subtle neo-classical elements have been introduced through proportions, wall detailing, and carefully framed focal points, giving the apartment a timeless quality without feeling overly ornamental. The interiors were envisioned to feel expressive and contemporary, while still remaining warm, practical, and deeply livable for the family\'s day-to-day life.'
+          ],
           images: [
             'img/assets/project1/01.jpg',
             'img/assets/project1/02.jpg',
@@ -144,7 +147,10 @@
         3: {
           name: 'The Bloom Retreat',
           year: '2026',
-          description: 'A luxury holiday home designed as a complete escape from the everyday. Five beautifully appointed bedrooms, each with its own distinct character, weave together comfort, privacy, and natural beauty — a retreat in the truest sense, serene, indulgent, and deeply restorative.',
+          description: [
+            'A luxury holiday home designed as a complete escape from the everyday. Five beautifully appointed bedrooms, each with its own distinct character, weave together comfort, privacy, and natural beauty — a retreat in the truest sense, serene, indulgent, and deeply restorative.',
+            'Envisioned as a home for slow mornings, long weekends, and meaningful gatherings, The Bloom Retreat embraces a lifestyle that is easy, grounded, and quietly restorative.'
+          ],
           images: [
             'img/assets/project3/BEDROOM VIEW 1.jpg',
             'img/assets/project3/BEDROOM VIEW 2.jpg',
@@ -159,7 +165,10 @@
         4: {
           name: 'The Zen Oasis',
           year: '2023',
-          description: 'Located within a sprawling 2900 sqft carpet area, The Zen Oasis is a 4BHK residence that seamlessly blends contemporary aesthetics with a warm and inviting ambiance. Natural materials, rich textures, and a warm colour palette create a sanctuary of comfort and elegance.',
+          description: [
+            'Located within a sprawling 2900 sqft carpet area, Zen House is a 4BHK residence that seamlessly blends contemporary aesthetics with a warm and inviting ambiance. The design ethos of Zen House centers around the harmonious integration of natural materials, rich textures, and a warm color palette, creating a sanctuary of comfort and elegance.',
+            'The home is designed with an emphasis on openness and balance, allowing every space to feel connected yet distinct in its own way. A restrained material palette paired with subtle contrasts adds depth without overwhelming the interiors. Natural light plays an important role throughout the home, enhancing the warmth of the materials and creating a calm, lived-in atmosphere. The result is a space that feels effortless, understated, and deeply personal to the people who inhabit it.'
+          ],
           images: [
             'img/assets/project4/E_MKGs_HR-1.jpg',
             'img/assets/project4/E_MKGs_HR-4.jpg',
@@ -244,12 +253,16 @@
 
           /* Text block only on first slide */
           if (i === 0) {
+            var descHtml = Array.isArray(proj.description)
+            ? proj.description.map(function(p){ return '<p class="pr-carousel__desc">' + p + '</p>'; }).join('')
+            : '<p class="pr-carousel__desc">' + proj.description + '</p>';
+
             var textBlock = document.createElement('div');
             textBlock.className = 'pr-carousel__text';
             textBlock.innerHTML =
               '<span class="pr-carousel__year">' + proj.year + '</span>' +
               '<h1 class="pr-carousel__title">' + proj.name + '</h1>' +
-              '<p class="pr-carousel__desc">' + proj.description + '</p>';
+              descHtml;
             slide.appendChild(textBlock);
           }
 
