@@ -102,6 +102,9 @@
       </section>
     </main>
 
+    <!-- Mobile project info (shown below carousel on small screens) -->
+    <div id="pr-project-info" class="pr-project-info"></div>
+
     <div id="footer-placeholder"></div>
 
     <!-- Shared: header injection, mobile menu, scroll-reveal, header shadow -->
@@ -231,6 +234,10 @@
         document.getElementById('pr-page-title').textContent = proj.name + ' — VB Studio';
 
         /* Build slides */
+        var descHtml = Array.isArray(proj.description)
+          ? proj.description.map(function(p){ return '<p class="pr-carousel__desc">' + p + '</p>'; }).join('')
+          : '<p class="pr-carousel__desc">' + proj.description + '</p>';
+
         proj.images.forEach(function (src, i) {
           var slide = document.createElement('div');
           slide.className = 'pr-carousel__slide';
@@ -251,23 +258,26 @@
           slide.appendChild(img);
           slide.appendChild(overlay);
 
-          /* Text block only on first slide */
-          if (i === 0) {
-            var descHtml = Array.isArray(proj.description)
-            ? proj.description.map(function(p){ return '<p class="pr-carousel__desc">' + p + '</p>'; }).join('')
-            : '<p class="pr-carousel__desc">' + proj.description + '</p>';
-
-            var textBlock = document.createElement('div');
-            textBlock.className = 'pr-carousel__text';
-            textBlock.innerHTML =
-              '<span class="pr-carousel__year">' + proj.year + '</span>' +
-              '<h1 class="pr-carousel__title">' + proj.name + '</h1>' +
-              descHtml;
-            slide.appendChild(textBlock);
-          }
+          /* Text block on every slide */
+          var textBlock = document.createElement('div');
+          textBlock.className = 'pr-carousel__text';
+          textBlock.innerHTML =
+            '<span class="pr-carousel__year">' + proj.year + '</span>' +
+            '<h1 class="pr-carousel__title">' + proj.name + '</h1>' +
+            descHtml;
+          slide.appendChild(textBlock);
 
           track.appendChild(slide);
         });
+
+        /* Populate mobile info panel */
+        var infoEl = document.getElementById('pr-project-info');
+        if (infoEl) {
+          infoEl.innerHTML =
+            '<span class="pr-carousel__year">' + proj.year + '</span>' +
+            '<h1 class="pr-carousel__title">' + proj.name + '</h1>' +
+            descHtml;
+        }
 
         /* Build dots */
         proj.images.forEach(function (_, i) {

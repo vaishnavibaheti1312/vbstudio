@@ -196,18 +196,36 @@
   stroke-linejoin: round;
 }
 
+/* ── Mobile info panel (below carousel) ── */
+.pr-project-info {
+  display: none;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .pr-carousel__text {
-    left: 28px;
-    right: 28px;
-    max-width: 100%;
-    top: auto;
-    bottom: 110px;
-    transform: none;
-    /* cap description lines on small screens so image stays visible */
-    max-height: 50vh;
-    overflow: hidden;
+    display: none; /* replaced by .pr-project-info below the carousel */
+  }
+
+  .pr-project-info {
+    display: block;
+    background: #1a1210;
+    padding: 32px 24px 52px;
+  }
+
+  .pr-project-info .pr-carousel__year {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .pr-project-info .pr-carousel__title {
+    font-size: 2.2rem;
+    margin: 0 0 16px;
+  }
+
+  .pr-project-info .pr-carousel__desc {
+    font-size: 0.88rem;
+    margin: 0 0 14px;
   }
 
   .pr-carousel__btn--prev { left: 12px; }
