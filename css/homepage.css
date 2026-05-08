@@ -173,7 +173,7 @@
 }
 .hp-mobile-menu__link {
   font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #F5F0EB;
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -1003,7 +1003,7 @@
   display: block;
   font-family: "Italianno", cursive;
   font-weight: 500;
-  font-size: clamp(32px, 5vw, 76px);
+  font-size: clamp(52px, 8vw, 76px);
   color: #F5F0EB;
   text-shadow: 0 2px 40px rgba(0,0,0,0.25);
   opacity: 0;
