@@ -252,6 +252,18 @@
           img.decoding = 'async';
           if (i === 0) img.fetchPriority = 'high';
 
+          /* Portrait detection — add class once dimensions are known */
+          function applyPortrait(el) {
+            if (el.naturalHeight > el.naturalWidth) {
+              el.classList.add('pr-carousel__img--portrait');
+            }
+          }
+          if (img.complete && img.naturalHeight > 0) {
+            applyPortrait(img);
+          } else {
+            img.addEventListener('load', function () { applyPortrait(img); }, { once: true });
+          }
+
           var overlay = document.createElement('div');
           overlay.className = 'pr-carousel__overlay';
 

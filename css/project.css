@@ -32,12 +32,18 @@
 .pr-carousel__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;          /* landscape — fills frame */
   object-position: center;
   display: block;
 }
 
-/* Gradient overlay so text stays readable */
+/* Portrait images: show full composition, right-aligned so text sits on the dark left */
+.pr-carousel__img--portrait {
+  object-fit: contain;
+  object-position: right center;
+}
+
+/* Gradient overlay — helps text readability on landscape images */
 .pr-carousel__overlay {
   position: absolute;
   inset: 0;
@@ -144,6 +150,7 @@
   font-weight: 300;
   letter-spacing: 0.12em;
   color: rgba(245, 240, 235, 0.65);
+  white-space: nowrap;
 }
 
 .pr-carousel__dots {
@@ -203,29 +210,43 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  /* On mobile always cover — text is in the panel below, not on the image */
+  .pr-carousel__img,
+  .pr-carousel__img--portrait {
+    object-fit: cover;
+    object-position: center;
+  }
+
   .pr-carousel__text {
-    display: none; /* replaced by .pr-project-info below the carousel */
+    display: none;
+  }
+
+  /* No text in carousel on mobile — remove gradient so images show cleanly */
+  .pr-carousel__overlay {
+    background: none;
   }
 
   .pr-project-info {
     display: block;
     background: #1a1210;
-    padding: 32px 24px 52px;
+    padding: 36px 24px 56px;
   }
 
   .pr-project-info .pr-carousel__year {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .pr-project-info .pr-carousel__title {
-    font-size: 2.2rem;
-    margin: 0 0 16px;
+    font-size: 2rem;
+    margin: 0 0 20px;
+    line-height: 1.15;
   }
 
   .pr-project-info .pr-carousel__desc {
     font-size: 0.88rem;
-    margin: 0 0 14px;
+    line-height: 1.85;
+    margin: 0 0 16px;
   }
 
   .pr-carousel__btn--prev { left: 12px; }

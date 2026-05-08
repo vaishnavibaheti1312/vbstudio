@@ -11,7 +11,7 @@
   style.textContent = '\
 #pg-curtain {\
   position: fixed; inset: 0; z-index: 9999;\
-  background: #3D2B1F;\
+  background: #1a1210;\
   display: flex; align-items: center; justify-content: center;\
   transform: translateX(-100%);\
   pointer-events: none;\
