@@ -2,7 +2,7 @@
    VB Studio — Homepage Redesign
    Color palette: warm cream (#F5F0EB), dark brown (#392F2C),
    accent brown (#BA6B57), charcoal (#333), cream buttons (#F5F0EB)
-   Fonts: Pinyon Script (script/cursive), Cormorant (display/serif),
+   Fonts: Italianno (script/cursive), Cormorant (display/serif),
           Playfair Display (cards/overlays), Lato, Poppins
    ============================================================ */
 
@@ -30,11 +30,12 @@
 /* ---------- Shared Section Title ---------- */
 .hp-section-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .hp-section-title--script {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
   font-size: 40px;
   color: #392F2C;
@@ -200,7 +201,7 @@
    ============================================================ */
 .hp-intro {
   background: #392F2C;
-  padding: 80px 20px;
+  padding: 60px 20px;
   color: #fff;
 }
 
@@ -228,7 +229,7 @@
    ============================================================ */
 .hp-founder {
   background: #fff;
-  padding: 60px 20px 80px;
+  padding: 50px 20px 60px;
 }
 
 .hp-founder__inner {
@@ -251,6 +252,16 @@
   padding: 20px 0;
 }
 
+.hp-founder__note-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #9A8070;
+  margin: 0 0 14px;
+}
+
 .hp-founder__quote-mark {
   font-family: "Cormorant", serif;
   font-size: 4rem;
@@ -269,10 +280,10 @@
 }
 
 .hp-founder__signature {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
   font-size: 28px;
-  line-height: 40px;
+  line-height: 1.2;
   color: #392F2C;
   margin-top: 28px;
   margin-bottom: 2px;
@@ -282,8 +293,9 @@
   font-family: "Cormorant", serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 1.4;
   color: #392F2C;
+  margin-top: 0;
 }
 
 /* ============================================================
@@ -291,7 +303,7 @@
    ============================================================ */
 .hp-works {
   background: #F5F0EB;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .hp-works__carousel-wrapper {
@@ -416,7 +428,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 120px 20px;
+  padding: 60px 20px;
 }
 
 .hp-services__overlay {
@@ -440,17 +452,18 @@
   line-height: 1.3;
   color: #fff;
   letter-spacing: 0;
+  margin-top: 0;
   margin-bottom: 24px;
 }
 
 .hp-services__text {
   font-family: "Cormorant", serif;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.75;
   color: #eee;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 /* ============================================================
@@ -458,7 +471,7 @@
    ============================================================ */
 .hp-process {
   background: #F5F0EB;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .hp-process__inner {
@@ -468,10 +481,11 @@
 }
 
 .hp-process__heading {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
   font-size: 40px;
   color: #392F2C;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -480,7 +494,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   color: #BA6B57;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 .hp-process__steps {
@@ -492,7 +506,7 @@
 
 .hp-process__step {
   flex: 1;
-  max-width: 240px;
+  max-width: 340px;
   text-align: center;
 }
 
@@ -505,19 +519,19 @@
 
 .hp-process__step-num {
   display: block;
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 26px;
+  line-height: 1.2;
   color: #BA6B57;
   margin-bottom: 8px;
 }
 
 .hp-process__step-title {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 32px;
+  line-height: 1.2;
   color: #392F2C;
   text-align: center;
   margin: 0;
@@ -544,7 +558,7 @@
    ============================================================ */
 .hp-instagram {
   background: #EDE5DC;
-  padding: 70px 20px;
+  padding: 55px 20px;
 }
 
 .hp-instagram__inner {
@@ -572,14 +586,15 @@
   font-size: 36px;
   line-height: 1.2;
   color: #392F2C;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
 .hp-instagram__desc {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 34px;
+  line-height: 1.4;
   color: #392F2C;
 }
 
@@ -599,7 +614,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
+  padding: 75px 20px;
 }
 
 .hp-cta__overlay {
@@ -621,6 +636,7 @@
   line-height: 1.5;
   color: #fff;
   text-align: center;
+  margin-top: 0;
   margin-bottom: 28px;
 }
 
@@ -766,7 +782,8 @@
   }
 
   .hp-process__steps {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
@@ -775,8 +792,9 @@
   }
 
   .hp-process__step {
-    flex: 0 0 calc(50% - 10px);
-    max-width: none;
+    flex: 0 0 auto;
+    width: 300px;
+    max-width: 300px;
   }
 
   .hp-instagram__inner {
@@ -796,9 +814,23 @@
     justify-content: center;
   }
 
+  .hp-footer__nav a {
+    font-size: 16px;
+  }
+
   .hp-footer__bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .hp-footer__links {
+    justify-content: center;
+  }
+
+  .hp-footer__links a {
+    font-size: 11px;
   }
 }
 
@@ -820,10 +852,19 @@
   }
 
   .hp-intro {
-    padding: 50px 16px;
+    padding: 36px 16px;
   }
 
   .hp-intro__text {
+    font-size: 1rem;
+  }
+
+  .hp-founder__note-title {
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  .hp-founder__quote {
     font-size: 1rem;
   }
 
@@ -832,7 +873,7 @@
   }
 
   .hp-founder {
-    padding: 40px 16px 50px;
+    padding: 30px 16px 36px;
   }
 
   .hp-founder__quote-mark {
@@ -840,11 +881,11 @@
   }
 
   .hp-works {
-    padding: 50px 16px;
+    padding: 36px 16px;
   }
 
   .hp-services {
-    padding: 80px 16px;
+    padding: 50px 16px;
   }
 
   .hp-services__heading {
@@ -856,11 +897,12 @@
   }
 
   .hp-process {
-    padding: 50px 16px;
+    padding: 36px 16px;
   }
 
   .hp-process__step {
-    flex: 0 0 100%;
+    width: 300px;
+    max-width: 300px;
   }
 
   .hp-process__heading {
@@ -868,11 +910,11 @@
   }
 
   .hp-instagram {
-    padding: 50px 16px;
+    padding: 36px 16px;
   }
 
   .hp-cta {
-    padding: 70px 16px;
+    padding: 50px 16px;
   }
 
   .hp-cta__heading {
@@ -889,11 +931,27 @@
 
   .hp-footer__bottom {
     padding: 20px 20px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .hp-footer__links {
+    justify-content: center;
+  }
+
+  .hp-footer__links a {
+    font-size: 10px;
   }
 
   .hp-footer__nav {
     flex-wrap: wrap;
     gap: 16px;
+  }
+
+  .hp-footer__nav a {
+    font-size: 14px;
   }
 }
 
@@ -943,9 +1001,9 @@
 
 .hp-hero__line {
   display: block;
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-  font-size: clamp(32px, 5vw, 64px);
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 76px);
   color: #F5F0EB;
   text-shadow: 0 2px 40px rgba(0,0,0,0.25);
   opacity: 0;

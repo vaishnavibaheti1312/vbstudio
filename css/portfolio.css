@@ -78,7 +78,7 @@
 /* ── Projects section ── */
 .pf-projects {
   background: #F5F0EB;
-  padding: 80px 60px 100px;
+  padding: 60px 40px 80px;
 }
 
 .pf-grid {
@@ -188,7 +188,7 @@
 /* ── Responsive: tablet ── */
 @media (max-width: 1024px) {
   .pf-projects {
-    padding: 60px 40px 80px;
+    padding: 50px 24px 64px;
   }
 
   .pf-grid {
@@ -238,7 +238,7 @@
   }
 
   .pf-projects {
-    padding: 50px 20px 70px;
+    padding: 40px 16px 56px;
   }
 
   .pf-grid {
