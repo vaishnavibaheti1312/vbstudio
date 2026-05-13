@@ -224,6 +224,22 @@
   text-align: center;
 }
 
+.hp-intro--script {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-size: 36px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
+              transform 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
+}
+
+.hp-revealed .hp-intro--script {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ============================================================
    FOUNDER QUOTE
    ============================================================ */
@@ -859,6 +875,10 @@
     font-size: 1rem;
   }
 
+  .hp-intro--script {
+    font-size: 1.8rem;
+  }
+
   .hp-founder__note-title {
     font-size: 0.78rem;
     text-align: center;
@@ -922,23 +942,29 @@
   }
 
   .hp-footer {
-    padding: 40px 0 20px;
+    padding: 30px 0 14px;
   }
 
   .hp-footer__top {
     padding: 0 20px;
+    gap: 14px;
+    margin-bottom: 20px;
   }
 
   .hp-footer__bottom {
-    padding: 20px 20px 0;
-    flex-direction: column;
+    padding: 12px 20px 0;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 11px;
+    line-height: 1.6;
   }
 
   .hp-footer__links {
     justify-content: center;
+    gap: 12px;
   }
 
   .hp-footer__links a {
@@ -996,7 +1022,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 0;
 }
 
 .hp-hero__line {
@@ -1004,8 +1030,9 @@
   font-family: "Italianno", cursive;
   font-weight: 500;
   font-size: clamp(52px, 8vw, 76px);
+  line-height: 1;
   color: #F5F0EB;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.25);
+  text-shadow: 0 5px 40px rgba(0,0,0,0.25);
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
